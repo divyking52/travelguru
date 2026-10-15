@@ -1,0 +1,30 @@
+{
+  "name": "mytourguru-kinetic",
+  "version": "2.0.0",
+  "description": "Ultra-fluid, scroll-driven, kinetic web experience for My Tour Guru Holiday Pvt Ltd",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "dev": "python -m http.server 8080",
+    "start:py": "python -m http.server 8080",
+    "start:node": "node server.js",
+    "build": "echo 'Static production assets ready in root'"
+  },
+  "keywords": [
+    "gsap",
+    "scrolltrigger",
+    "lenis",
+    "kinetic-scroll",
+    "awwwards",
+    "creative-development"
+  ],
+  "author": "Elite Creative Developer & Awwwards-winning Frontend Architect",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.18"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

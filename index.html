@@ -1,0 +1,5308 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis lenis-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY TOUR GURU HOLIDAY PVT. LTD. — Approved by Govt. of India | Andaman, Ladakh & Kashmir DMC</title>
+  
+  <meta name="description" content="My Tour Guru Holiday Pvt. Ltd. is India's premier Destination Management Company (DMC) with 10+ years experience, approved by Govt. of India. Best selling packages for Andaman, Ladakh, and Kashmir.">
+  <meta name="keywords" content="My Tour Guru, Andaman Tour Packages, Leh Ladakh Expeditions, Kashmir Luxury Tours, Port Blair DMC, Havelock Scuba, Pangong Tso, Gulmarg Gondola, Domestic Travel India">
+  <meta name="theme-color" content="#0E1714">
+  <link rel="canonical" href="https://www.mytourguru.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MY TOUR GURU HOLIDAY PVT. LTD. — Official Destination Management Company">
+  <meta property="og:description" content="Explore, Experience, Embrace the journey with us. Approved by Govt. of India. 10+ years DMC experience across Andaman, Ladakh, and Kashmir.">
+  <meta property="og:image" content="https://www.mytourguru.com/images/page1.webp">
+  <meta property="og:type" content="website">
+
+  <!-- Editorial luxury: Fraunces (display), Cormorant Garamond (italic accent), Outfit (precision UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Lenis CSS & Font Awesome -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & DESIGN TOKENS (LIGHT THEME DEFAULT)
+       ========================================================================== */
+    :root {
+      --bg-dark: #F2F4F3;
+      --bg-surface: #FAFBFA;
+      --bg-surface-elevated: #E8ECEA;
+      --bg-glass: rgba(250, 251, 250, 0.88);
+      --border-subtle: rgba(14, 23, 20, 0.09);
+      --border-active: rgba(27, 107, 99, 0.45);
+      
+      --accent-cyan: #1B6B63;
+      --accent-coral: #9C4A3A;
+      --accent-gold: #A67C52;
+      --accent-green: #3D7A5A;
+      
+      --text-primary: #0E1714;
+      --text-secondary: #3A4541;
+      --text-muted: #6B736F;
+      
+      --card-shadow: 0 12px 32px -12px rgba(14, 23, 20, 0.1);
+      --card-shadow-hover: 0 20px 48px -16px rgba(27, 107, 99, 0.18);
+      
+      --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+      --font-serif-accent: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Outfit', 'Segoe UI', sans-serif;
+      
+      --ease-elastic: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-snappy: cubic-bezier(0.25, 1, 0.5, 1);
+      
+      --container-max: 1440px;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+    }
+
+    [data-theme="dark"] {
+      --bg-dark: #0A100E;
+      --bg-surface: #121A17;
+      --bg-surface-elevated: #1A2420;
+      --bg-glass: rgba(18, 26, 23, 0.9);
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-active: rgba(94, 168, 158, 0.45);
+      
+      --accent-cyan: #5EA89E;
+      --accent-coral: #C47868;
+      --accent-gold: #C4A06A;
+      --accent-green: #6BAF8A;
+      
+      --text-primary: #F2F4F3;
+      --text-secondary: rgba(242, 244, 243, 0.72);
+      --text-muted: rgba(242, 244, 243, 0.42);
+      
+      --card-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+      --card-shadow-hover: 0 22px 50px rgba(94, 168, 158, 0.12);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: var(--accent-cyan);
+      color: #FFFFFF;
+    }
+
+    /* Film Grain Overlay */
+    .film-grain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.035;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    [data-theme="dark"] .film-grain {
+      mix-blend-mode: soft-light;
+      opacity: 0.05;
+    }
+
+    /* Custom Kinetic Cursor */
+    .custom-cursor-dot {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-gold);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .custom-cursor-follower {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(27, 107, 99, 0.4);
+      background: transparent;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease,
+                  width 0.35s var(--ease-elastic), 
+                  height 0.35s var(--ease-elastic), 
+                  border-radius 0.35s var(--ease-elastic), 
+                  background-color 0.35s var(--ease-elastic),
+                  border-color 0.35s var(--ease-elastic);
+    }
+
+    [data-theme="dark"] .custom-cursor-follower {
+      border: 1px solid rgba(94, 168, 158, 0.4);
+      background: transparent;
+    }
+
+    .custom-cursor-follower .cursor-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    body.cursor-hover .custom-cursor-follower {
+      width: 64px;
+      height: 64px;
+      border-color: var(--accent-cyan);
+      background: rgba(27, 107, 99, 0.08);
+    }
+
+    [data-theme="dark"] body.cursor-hover .custom-cursor-follower {
+      background: rgba(94, 168, 158, 0.1);
+    }
+
+    body.cursor-drag .custom-cursor-follower {
+      width: 132px;
+      height: 40px;
+      border-radius: 4px;
+      background: var(--text-primary);
+      border-color: var(--text-primary);
+    }
+
+    [data-theme="dark"] body.cursor-drag .custom-cursor-follower {
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      color: #0A100E;
+    }
+
+    body.cursor-drag .custom-cursor-follower .cursor-label {
+      opacity: 1;
+    }
+
+    @media (pointer: coarse) {
+      .custom-cursor-dot, .custom-cursor-follower {
+        display: none !important;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      color: inherit;
+    }
+
+    /* ==========================================================================
+       SITE HEADER WRAPPER (FIXED OVER HERO — NO JUMPS)
+       ========================================================================== */
+    .site-header-group {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: transform 0.4s var(--ease-elastic);
+    }
+
+    /* Main Navigation — translucent over hero, solid on scroll */
+    .main-nav {
+      position: relative;
+      width: 100%;
+      padding: 18px 40px;
+      background: transparent;
+      border-bottom: 1px solid transparent;
+      transition: background-color 0.4s ease, padding 0.35s var(--ease-elastic), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    [data-theme="dark"] .main-nav {
+      background: transparent;
+    }
+
+    .site-header-group.scrolled .main-nav {
+      background: var(--bg-glass);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom-color: var(--border-subtle);
+      box-shadow: 0 8px 24px rgba(14, 23, 20, 0.05);
+      padding: 12px 40px;
+    }
+
+    [data-theme="dark"] .site-header-group.scrolled .main-nav {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo-img {
+      height: 42px;
+      width: auto;
+      max-width: 190px;
+      object-fit: contain;
+      transition: transform 0.3s ease, filter 0.35s ease;
+      filter: brightness(0) invert(1);
+    }
+
+    .site-header-group.scrolled .brand-logo-img {
+      filter: none;
+    }
+
+    [data-theme="dark"] .brand-logo-img {
+      filter: brightness(0) invert(1);
+    }
+
+    .brand-logo:hover .brand-logo-img {
+      transform: scale(1.02);
+    }
+
+    .site-header-group:not(.scrolled) .nav-pill {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .site-header-group:not(.scrolled) .nav-pill:hover,
+    .site-header-group:not(.scrolled) .nav-pill.active {
+      color: #FAFBFA;
+    }
+
+    .site-header-group:not(.scrolled) .theme-toggle-btn {
+      color: #FAFBFA;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .site-header-group:not(.scrolled) .magnetic-btn {
+      background: #FAFBFA;
+      color: #0E1714;
+    }
+
+    .nav-destination-pills {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: transparent;
+      padding: 0;
+      border: none;
+    }
+
+    .nav-pill {
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 2px;
+      color: var(--text-secondary);
+      transition: color 0.25s ease, background 0.25s ease;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-pill:hover, .nav-pill.active {
+      color: var(--text-primary);
+      background: transparent;
+    }
+
+    .nav-pill.active::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 4px;
+      height: 1px;
+      background: var(--accent-gold);
+    }
+
+    [data-theme="dark"] .nav-pill:hover, [data-theme="dark"] .nav-pill.active {
+      background: transparent;
+      color: var(--text-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .theme-toggle-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    [data-theme="dark"] .theme-toggle-btn {
+      background: transparent;
+    }
+
+    .theme-toggle-btn:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .magnetic-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 26px;
+      border-radius: 2px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--text-primary);
+      color: var(--bg-surface);
+      transition: transform 0.3s var(--ease-elastic), background 0.3s ease, color 0.3s ease;
+      will-change: transform;
+    }
+
+    .magnetic-btn:hover {
+      background: var(--accent-cyan);
+      color: #FAFBFA;
+    }
+
+    [data-theme="dark"] .magnetic-btn {
+      background: var(--accent-cyan);
+      color: #0A100E;
+    }
+
+    [data-theme="dark"] .magnetic-btn:hover {
+      background: var(--accent-gold);
+      color: #0A100E;
+    }
+
+    .magnetic-btn.secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(8px);
+    }
+
+    [data-theme="dark"] .magnetic-btn.secondary {
+      background: transparent;
+      color: #FFF;
+      border-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .magnetic-btn.secondary:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      background: transparent;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-destination-pills {
+        display: none;
+      }
+    }
+
+
+    /* ==========================================================================
+       SECTION A: HERO — CINEMATIC BACKGROUND VIDEO & REFINED SCROLL UNVEIL
+       ========================================================================== */
+    .hero-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-sticky-viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      perspective: 1000px;
+    }
+
+    /* Full-Bleed Background Video Container */
+    .hero-video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .hero-bg-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%) scale(1.08);
+      object-fit: cover;
+      filter: brightness(0.72) contrast(1.08) saturate(1.05);
+      will-change: transform, filter;
+    }
+
+    [data-theme="dark"] .hero-bg-video {
+      filter: brightness(0.55) contrast(1.12) saturate(1.08);
+    }
+
+    /* Cinematic scrim — video stays the visual hero */
+    .hero-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(180deg, rgba(14, 23, 20, 0.55) 0%, rgba(14, 23, 20, 0.2) 38%, rgba(14, 23, 20, 0.72) 100%),
+        radial-gradient(ellipse at 50% 70%, transparent 0%, rgba(14, 23, 20, 0.35) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .hero-video-overlay {
+      background:
+        linear-gradient(180deg, rgba(10, 16, 14, 0.65) 0%, rgba(10, 16, 14, 0.25) 40%, rgba(10, 16, 14, 0.85) 100%),
+        radial-gradient(ellipse at 50% 70%, transparent 0%, rgba(10, 16, 14, 0.4) 100%);
+    }
+
+    .hero-video-controls {
+      position: absolute;
+      bottom: 32px;
+      right: 40px;
+      z-index: 25;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .video-ctrl-btn {
+      background: rgba(14, 23, 20, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 2px;
+      padding: 7px 14px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .video-ctrl-btn:hover {
+      background: rgba(255, 255, 255, 0.95);
+      color: #0E1714;
+      border-color: transparent;
+    }
+
+    /* Hero — brand-first, single composition */
+    .hero-content-layer {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 920px;
+      padding: 0 28px;
+      pointer-events: auto;
+      will-change: transform, opacity;
+      transform-origin: center center;
+      margin-top: 4vh;
+    }
+
+    .hero-brand-mark {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 7vw, 5.5rem);
+      font-weight: 500;
+      font-optical-sizing: auto;
+      letter-spacing: 0.02em;
+      line-height: 1;
+      color: #FAFBFA;
+      margin-bottom: 18px;
+      text-wrap: balance;
+    }
+
+    .hero-brand-mark em {
+      font-family: var(--font-serif-accent);
+      font-style: italic;
+      font-weight: 500;
+      color: var(--accent-gold);
+      letter-spacing: 0.01em;
+    }
+
+    .hero-headline {
+      font-family: var(--font-serif-accent);
+      font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+      color: rgba(250, 251, 250, 0.92);
+      margin-bottom: 16px;
+      text-wrap: balance;
+    }
+
+    .hero-subhead {
+      font-size: clamp(0.92rem, 1.1vw, 1.05rem);
+      font-weight: 400;
+      max-width: 520px;
+      margin: 0 auto 36px;
+      color: rgba(250, 251, 250, 0.68);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-cta-group .magnetic-btn {
+      background: #FAFBFA;
+      color: #0E1714;
+      min-width: 180px;
+    }
+
+    .hero-cta-group .magnetic-btn:hover {
+      background: var(--accent-gold);
+      color: #0E1714;
+    }
+
+    .hero-cta-group .magnetic-btn.secondary {
+      background: transparent;
+      color: #FAFBFA;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-cta-group .magnetic-btn.secondary:hover {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    /* Concierge strip — planner + trust below the fold */
+    .concierge-section {
+      position: relative;
+      z-index: 5;
+      background: var(--bg-surface);
+      padding: 0 40px 80px;
+      margin-top: -1px;
+    }
+
+    .concierge-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      transform: translateY(-48px);
+    }
+
+    .hero-planner-dock {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 20px 18px 28px;
+      margin: 0 auto 28px;
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: 1.3fr auto 1.2fr auto 1.2fr auto;
+      align-items: center;
+      gap: 14px;
+      box-shadow: var(--card-shadow);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    [data-theme="dark"] .hero-planner-dock {
+      background: var(--bg-surface);
+    }
+
+    .hero-planner-dock:hover {
+      border-color: rgba(27, 107, 99, 0.3);
+    }
+
+    .planner-field {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      text-align: left;
+    }
+
+    .planner-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .planner-label i {
+      color: var(--accent-gold);
+      font-size: 0.7rem;
+    }
+
+    .planner-select {
+      background: transparent;
+      border: none;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      cursor: pointer;
+      width: 100%;
+      outline: none;
+      padding: 2px 0;
+    }
+
+    .planner-select option {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    .planner-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--border-subtle);
+    }
+
+    .planner-action-wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    .planner-submit-btn {
+      background: var(--text-primary);
+      color: var(--bg-surface);
+      border: none;
+      border-radius: 2px;
+      padding: 14px 24px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .planner-submit-btn:hover {
+      background: var(--accent-cyan);
+      color: #FAFBFA;
+    }
+
+    [data-theme="dark"] .planner-submit-btn {
+      background: var(--accent-cyan);
+      color: #0A100E;
+    }
+
+    .hero-quick-destinations {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+
+    .quick-dest-kicker {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-right: 6px;
+    }
+
+    .quick-dest-chip {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 2px;
+      padding: 8px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+    }
+
+    .quick-dest-chip:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      background: rgba(27, 107, 99, 0.04);
+    }
+
+    .chip-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .andaman-dot { background: #1B6B63; }
+    .ladakh-dot { background: #A67C52; }
+    .kashmir-dot { background: #3D7A5A; }
+
+    .chip-title {
+      font-weight: 600;
+    }
+
+    .chip-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .chip-arrow {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .quick-dest-chip:hover .chip-arrow {
+      color: var(--accent-cyan);
+      transform: translate(2px, -2px);
+    }
+
+    .hero-meta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 28px;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 16px;
+      text-align: center;
+    }
+
+    .hero-meta-top {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .hero-meta-val {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.1;
+    }
+
+    .hero-meta-unit {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-meta-lbl {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .hero-meta-sep {
+      display: none;
+    }
+
+    @media (max-width: 860px) and (min-width: 769px) {
+      .hero-planner-dock {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 16px;
+      }
+      .planner-divider {
+        display: none;
+      }
+      .planner-submit-btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-meta-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 12px;
+      }
+      .concierge-section {
+        padding: 0 24px 60px;
+      }
+      .hero-video-controls {
+        right: 16px;
+        bottom: 20px;
+      }
+    }
+
+    .scroll-down-hud {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .scroll-down-mouse {
+      width: 18px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .scroll-down-wheel {
+      width: 2px;
+      height: 5px;
+      background: var(--accent-gold);
+      border-radius: 1px;
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: wheel-bounce 1.8s infinite;
+    }
+
+    @keyframes wheel-bounce {
+      0% { transform: translate(-50%, 0); opacity: 1; }
+      80% { transform: translate(-50%, 10px); opacity: 0; }
+      100% { transform: translate(-50%, 0); opacity: 0; }
+    }
+
+    /* ==========================================================================
+       SECTION BRIDGE — PARALLAX TRANSITION INTO ABOUT
+       ========================================================================== */
+    .section-bridge {
+      position: relative;
+      width: 100%;
+      height: clamp(42vh, 52vw, 62vh);
+      min-height: 320px;
+      max-height: 640px;
+      overflow: hidden;
+      background: #0c1210;
+      isolation: isolate;
+    }
+
+    .section-bridge-media {
+      position: absolute;
+      inset: -22% 0;
+      z-index: 0;
+      will-change: transform;
+    }
+
+    .section-bridge-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      display: block;
+      transform: scale(1.06);
+    }
+
+    .section-bridge-scrim {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(180deg,
+          rgba(12, 18, 16, 0.55) 0%,
+          rgba(12, 18, 16, 0.28) 42%,
+          rgba(12, 18, 16, 0.48) 78%,
+          var(--bg-dark) 100%),
+        linear-gradient(90deg,
+          rgba(12, 18, 16, 0.5) 0%,
+          transparent 55%,
+          rgba(12, 18, 16, 0.28) 100%);
+      pointer-events: none;
+    }
+
+    [data-theme="dark"] .section-bridge-scrim {
+      background:
+        linear-gradient(180deg,
+          rgba(8, 12, 11, 0.62) 0%,
+          rgba(8, 12, 11, 0.32) 42%,
+          rgba(8, 12, 11, 0.55) 78%,
+          var(--bg-dark) 100%),
+        linear-gradient(90deg,
+          rgba(8, 12, 11, 0.55) 0%,
+          transparent 55%,
+          rgba(8, 12, 11, 0.32) 100%);
+    }
+
+    .section-bridge-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px 8vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      will-change: transform, opacity;
+    }
+
+    .section-bridge-eyebrow {
+      font-family: var(--font-body, 'Outfit', sans-serif);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin: 0 0 18px;
+    }
+
+    .section-bridge-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.2vw, 3.35rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: #f4f0e8;
+      max-width: 14ch;
+      margin: 0;
+    }
+
+    .section-bridge-title em {
+      font-style: italic;
+      font-weight: 450;
+      color: var(--accent-cyan);
+    }
+
+    .section-bridge-line {
+      width: 48px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-gold), transparent);
+      margin-top: 28px;
+      transform-origin: left center;
+    }
+
+    /* ==========================================================================
+       SECTION B: ABOUT US & PHILOSOPHY — EDITORIAL SPLIT GRID (FROM MYTOURGURU.COM)
+       ========================================================================== */
+    .manifesto-container {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      background: var(--bg-dark);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 0;
+    }
+
+    .manifesto-ambient-glow {
+      position: absolute;
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 60vw;
+      height: 55vh;
+      background: radial-gradient(circle, rgba(27, 107, 99, 0.07) 0%, rgba(166, 124, 82, 0.04) 45%, transparent 70%);
+      pointer-events: none;
+      filter: blur(90px);
+      z-index: 1;
+    }
+
+    [data-theme="dark"] .manifesto-ambient-glow {
+      background: radial-gradient(circle, rgba(94, 168, 158, 0.08) 0%, rgba(196, 160, 106, 0.04) 45%, transparent 70%);
+    }
+
+    .manifesto-inner {
+      max-width: var(--container-max);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-split-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .about-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .manifesto-pre-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 18px;
+    }
+
+    .manifesto-pre-label::before {
+      content: '';
+      width: 28px;
+      height: 1px;
+      background: var(--accent-gold);
+    }
+
+    .manifesto-main-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.6vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      text-wrap: balance;
+    }
+
+    .manifesto-core-statement {
+      font-size: clamp(1rem, 1.4vw, 1.25rem);
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .manifesto-core-statement .highlight-cyan {
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+
+    .about-highlights-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .about-highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+    }
+
+    .about-highlight-item i {
+      color: var(--accent-green);
+      font-size: 1.05rem;
+      margin-top: 3px;
+    }
+
+    /* About Media Column with Real Team & Assets */
+    .about-media-col {
+      position: relative;
+    }
+
+    .about-media-card-main {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .about-media-card-main img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s var(--ease-elastic);
+    }
+
+    .about-media-card-main:hover img {
+      transform: scale(1.04);
+    }
+
+    .about-media-overlay-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(250, 251, 250, 0.94);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    [data-theme="dark"] .about-media-overlay-badge {
+      background: rgba(12, 17, 26, 0.9);
+    }
+
+    .about-badge-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 2px;
+      background: var(--accent-cyan);
+      color: #FAFBFA;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .about-badge-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+
+    .about-badge-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .about-secondary-card {
+      position: absolute;
+      top: -30px;
+      right: -25px;
+      width: 220px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 10px;
+      box-shadow: var(--card-shadow);
+      z-index: 5;
+    }
+
+    .about-secondary-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .about-secondary-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+    }
+
+    /* 3 Geographic Frontiers Cards */
+    .manifesto-territories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .territory-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px 26px;
+      box-shadow: none;
+      transition: border-color 0.35s ease, transform 0.35s var(--ease-elastic), box-shadow 0.35s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    [data-theme="dark"] .territory-card {
+      background: var(--bg-surface);
+    }
+
+    .territory-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--accent-gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .territory-card:hover {
+      border-color: var(--border-active);
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-6px);
+    }
+
+    [data-theme="dark"] .territory-card:hover {
+      border-color: var(--border-active);
+      background: var(--bg-surface-elevated);
+    }
+
+    .territory-card:hover::before {
+      opacity: 1;
+    }
+
+    .territory-card:hover .territory-icon {
+      transform: scale(1.08);
+      background: var(--accent-cyan);
+      color: #FAFBFA;
+    }
+
+    .territory-card:nth-child(2):hover .territory-icon {
+      background: var(--accent-gold);
+      color: #0E1714;
+    }
+
+    .territory-card:nth-child(3):hover .territory-icon {
+      background: var(--accent-green);
+      color: #FAFBFA;
+    }
+
+    .territory-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .territory-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 2px;
+      background: rgba(27, 107, 99, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-size: 1.05rem;
+      transition: transform 0.35s var(--ease-elastic), background 0.3s ease, color 0.3s ease;
+    }
+
+    [data-theme="dark"] .territory-icon {
+      background: rgba(94, 168, 158, 0.1);
+    }
+
+    .territory-card:nth-child(2) .territory-icon {
+      background: rgba(166, 124, 82, 0.1);
+      color: var(--accent-gold);
+    }
+
+    .territory-card:nth-child(3) .territory-icon {
+      background: rgba(61, 122, 90, 0.1);
+      color: var(--accent-green);
+    }
+
+    [data-theme="dark"] .territory-card:nth-child(3) .territory-icon {
+      background: rgba(107, 175, 138, 0.1);
+      color: var(--accent-green);
+    }
+
+    .territory-coords {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .territory-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      text-transform: none;
+      margin-bottom: 10px;
+    }
+
+    .territory-desc {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .manifesto-credo-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 28px;
+      gap: 20px;
+    }
+
+    .credo-text {
+      font-size: 0.94rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .credo-text span {
+      color: var(--accent-gold);
+    }
+
+    .credo-badges {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .credo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      background: transparent;
+      padding: 7px 14px;
+      border-radius: 2px;
+      border: 1px solid var(--border-subtle);
+      white-space: nowrap;
+    }
+
+    [data-theme="dark"] .credo-pill {
+      background: transparent;
+    }
+
+    .credo-pill i {
+      color: var(--accent-gold);
+    }
+
+    @media (max-width: 960px) {
+      .about-split-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .about-secondary-card {
+        display: none;
+      }
+      .manifesto-territories-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .manifesto-credo-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .credo-badges {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION C: FEATURES SHOWCASE — HORIZONTAL SCROLL & PARALLAX CARDS
+       ========================================================================== */
+    .horizontal-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: var(--bg-surface-elevated);
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .horizontal-section {
+      background: #0A100E;
+    }
+
+    .horizontal-pin-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .horizontal-hud {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      right: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 50;
+      pointer-events: none;
+    }
+
+    .hud-title-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hud-subtitle {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+    }
+
+    .hud-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: -0.01em;
+    }
+
+    .hud-counter-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .hud-current-index {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .hud-divider {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+    }
+
+    .hud-total {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .hud-progress-line-container {
+      width: 120px;
+      height: 3px;
+      background: rgba(15, 23, 42, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    [data-theme="dark"] .hud-progress-line-container {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hud-progress-line-bar {
+      width: 100%;
+      height: 100%;
+      background: var(--accent-cyan);
+      transform-origin: left center;
+      transform: scaleX(0.14);
+      will-change: transform;
+      transition: transform 0.1s linear;
+    }
+
+    .horizontal-track {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      padding-left: 60px;
+      padding-right: 140px;
+      gap: 40px;
+      will-change: transform;
+    }
+
+    .expedition-card {
+      flex: 0 0 clamp(420px, 48vw, 720px);
+      height: clamp(520px, 68vh, 670px);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: var(--card-shadow);
+      transition: border-color 0.4s ease, transform 0.4s var(--ease-elastic), box-shadow 0.4s ease;
+    }
+
+    .expedition-card:hover {
+      border-color: var(--border-active);
+      transform: translateY(-8px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .card-media-wrapper {
+      position: relative;
+      width: 100%;
+      height: 56%;
+      overflow: hidden;
+    }
+
+    .card-parallax-img {
+      position: absolute;
+      top: -15%;
+      left: -15%;
+      width: 130%;
+      height: 130%;
+      object-fit: cover;
+      will-change: transform;
+      transition: filter 0.5s ease, transform 0.7s var(--ease-elastic);
+      filter: brightness(0.96);
+    }
+
+    [data-theme="dark"] .card-parallax-img {
+      filter: brightness(0.85);
+    }
+
+    .expedition-card:hover .card-parallax-img {
+      filter: brightness(1.05);
+      transform: scale(1.06);
+    }
+
+    .expedition-card .magnetic-btn,
+    .expedition-card .card-inquire-btn {
+      transition: transform 0.3s var(--ease-elastic), background 0.3s ease, color 0.3s ease;
+    }
+
+    .expedition-card:hover .magnetic-btn,
+    .expedition-card:hover .card-inquire-btn {
+      transform: translateX(3px);
+    }
+
+    .card-badge-floating {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(250, 251, 250, 0.92);
+      border: 1px solid rgba(14, 23, 20, 0.08);
+      backdrop-filter: blur(12px);
+      padding: 6px 12px;
+      border-radius: 2px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      z-index: 5;
+    }
+
+    [data-theme="dark"] .card-badge-floating {
+      background: rgba(10, 16, 14, 0.88);
+      border-color: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
+    }
+
+    .card-discount-tag {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent-gold);
+      color: #0E1714;
+      padding: 6px 12px;
+      border-radius: 2px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      z-index: 5;
+    }
+
+    .card-info-content {
+      padding: 26px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      background: var(--bg-surface);
+    }
+
+    [data-theme="dark"] .card-info-content {
+      background: linear-gradient(180deg, rgba(12, 17, 26, 0.95) 0%, #080C14 100%);
+    }
+
+    .card-meta-top {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .card-meta-top i {
+      color: var(--accent-cyan);
+    }
+
+    .card-headline {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 500;
+      line-height: 1.28;
+      margin-bottom: 10px;
+      word-break: normal;
+      overflow-wrap: break-word;
+      text-wrap: balance;
+    }
+
+    .card-description {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      text-wrap: pretty;
+    }
+
+    .card-feature-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .card-feature-pill {
+      font-size: 0.68rem;
+      font-weight: 500;
+      padding: 4px 10px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 2px;
+      color: var(--text-secondary);
+    }
+
+    [data-theme="dark"] .card-feature-pill {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .card-footer-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 16px;
+    }
+
+    .card-price-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-price-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .card-price-value {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .card-price-value span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+
+    /* ==========================================================================
+       SECTION D: METRICS & VELOCITY-REACTIVE MARQUEE
+       ========================================================================== */
+    .metrics-section {
+      position: relative;
+      padding: 120px 0;
+      background: var(--bg-dark);
+      overflow: hidden;
+    }
+
+    .marquee-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(12px, 1.6vw, 20px);
+      margin-bottom: clamp(56px, 8vw, 96px);
+      padding: 18px 0 22px;
+      transform-origin: center center;
+      mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+
+    .marquee-row {
+      display: flex;
+      width: max-content;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .marquee-content {
+      display: flex;
+      flex-shrink: 0;
+      white-space: nowrap;
+      align-items: center;
+      gap: clamp(22px, 2.5vw, 36px);
+      padding-right: clamp(22px, 2.5vw, 36px);
+      font-family: var(--font-display);
+      font-size: clamp(2.1rem, 4.2vw, 4.4rem);
+      font-weight: 650;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.25px rgba(14, 23, 20, 0.18);
+    }
+
+    [data-theme="dark"] .marquee-content {
+      -webkit-text-stroke: 1px rgba(244, 240, 232, 0.22);
+    }
+
+    .marquee-content span {
+      white-space: nowrap;
+    }
+
+    .marquee-content .highlight {
+      color: var(--accent-cyan);
+      -webkit-text-stroke: 0;
+      font-style: normal;
+      font-weight: 700;
+    }
+
+    .marquee-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-row {
+        transform: none !important;
+      }
+    }
+
+    .metrics-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .metrics-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 60px;
+    }
+
+    .metrics-header .sub-badge {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .metrics-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.2vw, 3rem);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      box-shadow: none;
+      transition: border-color 0.3s ease, transform 0.3s var(--ease-elastic), box-shadow 0.3s ease;
+    }
+
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--accent-gold);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .metric-card:hover {
+      border-color: var(--border-active);
+      box-shadow: var(--card-shadow-hover);
+      transform: translateY(-6px);
+    }
+
+    .metric-card:hover .metric-number-wrap {
+      color: var(--accent-cyan);
+    }
+
+    .metric-card:hover::before {
+      opacity: 1;
+    }
+
+    .metric-number-wrap {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 3.6vw, 3.4rem);
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: baseline;
+      transition: color 0.3s ease;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .metric-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    @media (max-width: 992px) {
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+
+    /* ==========================================================================
+       SECTION E: VIDEO REVIEWS & TRAVELER STORIES (FROM MYTOURGURU.COM)
+       ========================================================================== */
+    .video-stories-section {
+      padding: 100px 0;
+      background: var(--bg-surface-elevated);
+      position: relative;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .video-stories-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 50px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+      font-weight: 500;
+      text-transform: none;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+    }
+
+    .video-stories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .video-story-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: none;
+      transition: transform 0.35s var(--ease-elastic), box-shadow 0.35s ease, border-color 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-story-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--border-active);
+    }
+
+    .video-thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+    }
+
+    .video-thumb-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-elastic);
+    }
+
+    .video-story-card:hover .video-thumb-img {
+      transform: scale(1.08);
+    }
+
+    .video-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.9);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      padding-left: 3px;
+      box-shadow: 0 0 30px rgba(2, 132, 199, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .video-story-card:hover .video-play-btn {
+      transform: translate(-50%, -50%) scale(1.15);
+      background: var(--accent-coral);
+      box-shadow: 0 0 30px rgba(225, 29, 72, 0.6);
+    }
+
+    .video-badge-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .video-story-content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .video-story-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .video-story-desc {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .video-story-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 14px;
+    }
+
+    .video-author-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-cyan);
+      font-weight: 700;
+      font-size: 0.82rem;
+    }
+
+    .video-author-name {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .video-author-meta {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 900px) {
+      .video-stories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION F: CUSTOMER PHOTO GALLERY MOSAIC (FROM MYTOURGURU.COM)
+       ========================================================================== */
+    .gallery-mosaic-section {
+      padding: 120px 0;
+      background: var(--bg-dark);
+      position: relative;
+    }
+
+    .gallery-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .gallery-mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      height: 260px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-subtle);
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-elastic), box-shadow 0.35s ease;
+    }
+
+    .gallery-item.span-2 {
+      grid-column: span 2;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-elastic), filter 0.4s ease;
+      filter: brightness(0.96);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+      filter: brightness(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(14, 23, 20, 0.88) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-caption {
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .gallery-location-tag {
+      font-size: 0.68rem;
+      color: var(--accent-cyan);
+      display: block;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-mosaic-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-item.span-2 {
+        grid-column: span 1;
+      }
+    }
+
+
+    /* ==========================================================================
+       SECTION G: FOOTER — MODERN LUXURY FOOTER (FULL CONTENT & NO CLIPPING)
+       ========================================================================== */
+    .site-footer {
+      background: #0E1714;
+      color: #FAFBFA;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 90px 0 40px;
+      z-index: 10;
+    }
+
+    [data-theme="dark"] .site-footer {
+      background: #070C0A;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .footer-bg-glow {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(27, 107, 99, 0.12) 0%, rgba(166, 124, 82, 0.05) 50%, transparent 70%);
+      pointer-events: none;
+      filter: blur(90px);
+      z-index: 1;
+    }
+
+    [data-theme="dark"] .footer-bg-glow {
+      background: radial-gradient(circle, rgba(94, 168, 158, 0.1) 0%, rgba(196, 160, 106, 0.04) 50%, transparent 70%);
+    }
+
+    .footer-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Top CTA Card inside Footer */
+    .footer-cta-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: 56px 40px;
+      text-align: center;
+      margin-bottom: 70px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-cta-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+    }
+
+    .footer-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      background: transparent;
+      border: 1px solid rgba(166, 124, 82, 0.4);
+      border-radius: 2px;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 22px;
+    }
+
+    .footer-huge-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      text-transform: none;
+      margin-bottom: 18px;
+      color: #FAFBFA;
+      word-break: keep-all;
+      text-wrap: balance;
+    }
+
+    .footer-sub {
+      font-size: clamp(0.95rem, 1.25vw, 1.15rem);
+      color: rgba(255, 255, 255, 0.75);
+      max-width: 720px;
+      margin: 0 auto 34px;
+      line-height: 1.65;
+    }
+
+    .footer-cta-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-magnetic-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 34px;
+      border-radius: 2px;
+      background: #FAFBFA;
+      color: #0E1714;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .footer-magnetic-cta:hover {
+      background: var(--accent-gold);
+      color: #0E1714;
+      transform: translateY(-2px);
+    }
+
+    .footer-whatsapp-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 2px;
+      background: transparent;
+      border: 1px solid rgba(37, 211, 102, 0.45);
+      color: #25D366;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .footer-whatsapp-cta:hover {
+      background: #25D366;
+      color: #FFFFFF;
+      border-color: #25D366;
+      transform: translateY(-2px);
+    }
+
+    /* 4-Column Grid */
+    .footer-grid-4col {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr 1.35fr 1.3fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: none;
+      color: #FAFBFA;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-col-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-about-text {
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .footer-social-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-social-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social-btn:hover {
+      background: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+      color: #FFFFFF;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+
+    .footer-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .footer-links-list li a {
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.68);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links-list li a:hover {
+      color: var(--accent-cyan);
+      transform: translateX(4px);
+    }
+
+    .footer-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.5;
+    }
+
+    .footer-contact-item i {
+      color: var(--accent-cyan);
+      font-size: 1rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-item a {
+      color: #FFFFFF;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+
+    .footer-contact-item a:hover {
+      color: var(--accent-cyan);
+    }
+
+    /* Newsletter Box */
+    .newsletter-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .newsletter-desc {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.55;
+      margin-bottom: 4px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .newsletter-input {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 10px;
+      padding: 10px 14px;
+      color: #FFFFFF;
+      font-size: 0.86rem;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .newsletter-input:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .newsletter-submit-btn {
+      background: #FAFBFA;
+      color: #0E1714;
+      border-radius: 2px;
+      padding: 11px 18px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .newsletter-submit-btn:hover {
+      background: var(--accent-gold);
+      color: #0E1714;
+    }
+
+    .footer-pay-banner {
+      margin-top: 14px;
+      background: rgba(166, 124, 82, 0.1);
+      border: 1px dashed rgba(166, 124, 82, 0.4);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-pay-link {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent-gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-pay-link:hover {
+      color: #FFFFFF;
+    }
+
+    /* Bottom Bar */
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copyright {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-accreditation {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-accreditation i {
+      color: var(--accent-gold);
+    }
+
+    .back-to-top-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 2px;
+      padding: 7px 14px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .back-to-top-btn:hover {
+      background: #FAFBFA;
+      color: #0E1714;
+      border-color: #FAFBFA;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .footer-grid-4col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .footer-cta-card {
+        padding: 40px 20px;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 14px;
+      }
+    }
+
+    /* ==========================================================================
+       EXPEDITION INQUIRY MODAL (<dialog>)
+       ========================================================================== */
+    dialog.expedition-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.96);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      background: var(--bg-surface);
+      box-shadow: 0 28px 80px rgba(14, 23, 20, 0.2);
+      color: var(--text-primary);
+      width: min(92vw, 680px);
+      padding: 40px;
+      z-index: 10001;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.4s var(--ease-elastic);
+    }
+
+    [data-theme="dark"] dialog.expedition-modal {
+      background: var(--bg-surface);
+      box-shadow: 0 32px 90px rgba(0, 0, 0, 0.7);
+    }
+
+    dialog.expedition-modal[open] {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    dialog.expedition-modal::backdrop {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    [data-theme="dark"] dialog.expedition-modal::backdrop {
+      background: rgba(4, 6, 10, 0.85);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .modal-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-transform: none;
+      color: var(--text-primary);
+    }
+
+    .modal-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 2px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(15, 23, 42, 0.12);
+      color: var(--text-primary);
+    }
+
+    [data-theme="dark"] .modal-close-btn {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    [data-theme="dark"] .modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .modal-form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .form-control {
+      width: 100%;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      padding: 13px 18px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.94rem;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    [data-theme="dark"] .form-control {
+      background: rgba(255, 255, 255, 0.04);
+      color: #FFF;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent-cyan);
+      background: var(--bg-surface);
+    }
+
+    [data-theme="dark"] .form-control:focus {
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .destination-chips {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .dest-chip-btn {
+      padding: 9px 16px;
+      border-radius: 2px;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    [data-theme="dark"] .dest-chip-btn {
+      background: transparent;
+    }
+
+    .dest-chip-btn.selected {
+      background: var(--text-primary);
+      color: var(--bg-surface);
+      border-color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .modal-submit-btn {
+      width: 100%;
+      padding: 15px;
+      border-radius: 2px;
+      background: var(--text-primary);
+      color: var(--bg-surface);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+      margin-top: 6px;
+    }
+
+    .modal-submit-btn:hover {
+      background: var(--accent-cyan);
+      color: #FAFBFA;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 768px) {
+      .main-nav {
+        padding: 10px 16px;
+      }
+
+      .site-header-group.scrolled .main-nav {
+        padding: 8px 16px;
+      }
+
+      .brand-logo-img {
+        height: 34px;
+        max-width: 140px;
+      }
+
+      .nav-actions {
+        gap: 8px;
+      }
+
+      .theme-toggle-btn {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+      }
+
+      .magnetic-btn {
+        padding: 8px 12px;
+        font-size: 0.68rem;
+        letter-spacing: 0.06em;
+        gap: 6px;
+        white-space: nowrap;
+      }
+
+      .magnetic-btn i {
+        font-size: 0.65rem;
+      }
+
+      #open-inquiry-nav-btn span {
+        max-width: 9.5ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .hero-content-layer {
+        max-width: 100%;
+        padding: 0 20px;
+        margin-top: 8vh;
+      }
+
+      .hero-brand-mark {
+        font-size: clamp(2.2rem, 11vw, 3rem);
+        margin-bottom: 12px;
+      }
+
+      .hero-headline {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+
+      .hero-subhead {
+        font-size: 0.9rem;
+        margin-bottom: 24px;
+        max-width: 100%;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .hero-cta-group .magnetic-btn {
+        width: 100%;
+        min-width: 0;
+        padding: 14px 20px;
+        font-size: 0.75rem;
+      }
+
+      .scroll-down-hud {
+        display: none;
+      }
+
+      .hero-video-controls {
+        bottom: 16px;
+        right: 12px;
+        gap: 6px;
+      }
+
+      .video-ctrl-btn {
+        padding: 6px 10px;
+        font-size: 0.6rem;
+      }
+
+      .video-ctrl-btn span {
+        display: none;
+      }
+
+      .concierge-section {
+        padding: 0 16px 48px;
+      }
+
+      .concierge-inner {
+        transform: translateY(-24px);
+      }
+
+      .hero-planner-dock {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 14px;
+        border-radius: var(--radius-md);
+        margin-bottom: 20px;
+      }
+
+      .planner-divider {
+        display: none;
+      }
+
+      .planner-submit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 18px;
+      }
+
+      .hero-quick-destinations {
+        gap: 8px;
+        margin-bottom: 28px;
+        justify-content: flex-start;
+      }
+
+      .quick-dest-kicker {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2px;
+      }
+
+      .quick-dest-chip {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+        justify-content: flex-start;
+        padding: 10px 12px;
+      }
+
+      .chip-sub {
+        display: none;
+      }
+
+      .hero-meta-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 8px;
+        padding-top: 22px;
+      }
+
+      .hero-meta-val {
+        font-size: 1.25rem;
+      }
+
+      .section-bridge {
+        height: 48vh;
+        min-height: 280px;
+        max-height: 480px;
+      }
+
+      .section-bridge-content {
+        padding: 0 20px 6vh;
+      }
+
+      .section-bridge-title {
+        max-width: 16ch;
+      }
+
+      .manifesto-container {
+        padding: 72px 0;
+      }
+
+      .manifesto-inner {
+        padding: 0 16px;
+      }
+
+      .about-split-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 32px;
+      }
+
+      .about-secondary-card {
+        display: none;
+      }
+
+      .about-media-card-main img {
+        height: 260px;
+      }
+
+      .about-media-overlay-badge {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 14px;
+        gap: 10px;
+      }
+
+      .territory-card {
+        padding: 20px 18px;
+      }
+
+      .manifesto-credo-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding-top: 20px;
+      }
+
+      .credo-badges {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .credo-pill {
+        padding: 6px 10px;
+        font-size: 0.64rem;
+      }
+
+      .horizontal-section {
+        height: auto !important;
+        overflow: visible;
+      }
+
+      .horizontal-pin-wrapper {
+        height: auto !important;
+        display: block !important;
+        padding: 56px 0 40px;
+        overflow: visible;
+      }
+
+      .horizontal-hud {
+        position: static !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 14px;
+        margin-bottom: 20px;
+        pointer-events: auto;
+        padding: 0 16px;
+      }
+
+      .hud-title {
+        font-size: 1.55rem;
+        max-width: 100%;
+      }
+
+      .hud-counter-wrap {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hud-progress-line-container {
+        flex: 1;
+        max-width: none;
+        width: auto;
+      }
+
+      .horizontal-track {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+        padding: 4px 16px 12px !important;
+        transform: none !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 16px;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        touch-action: pan-x;
+      }
+
+      .horizontal-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .expedition-card {
+        flex: 0 0 min(82vw, 320px) !important;
+        width: min(82vw, 320px) !important;
+        max-width: min(82vw, 320px) !important;
+        height: auto !important;
+        min-height: 0 !important;
+        border-radius: var(--radius-md);
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+      }
+
+      .card-media-wrapper {
+        height: 180px;
+      }
+
+      .card-badge-floating,
+      .card-discount-tag {
+        top: 12px;
+        font-size: 0.62rem;
+        padding: 5px 10px;
+      }
+
+      .card-badge-floating {
+        left: 12px;
+      }
+
+      .card-discount-tag {
+        right: 12px;
+      }
+
+      .card-info-content {
+        padding: 18px 16px 16px;
+        gap: 0;
+      }
+
+      .card-meta-top {
+        flex-wrap: wrap;
+        gap: 8px 12px;
+        font-size: 0.7rem;
+        margin-bottom: 6px;
+      }
+
+      .card-headline {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+
+      .card-description {
+        font-size: 0.8rem;
+        margin-bottom: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .card-feature-pills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        margin-bottom: 14px;
+      }
+
+      .card-feature-pill {
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 0.64rem;
+      }
+
+      .card-feature-pill:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+      }
+
+      .card-footer-action {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding-top: 12px;
+      }
+
+      .card-price-value {
+        font-size: 1.2rem;
+      }
+
+      .card-footer-action .magnetic-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 16px;
+      }
+
+      .metrics-section {
+        padding: 72px 0;
+      }
+
+      .marquee-container {
+        margin-bottom: 48px;
+        gap: 10px;
+      }
+
+      .metrics-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
+        margin-bottom: 48px;
+        padding: 0 16px;
+      }
+
+      .metric-card {
+        padding: 22px 16px;
+      }
+
+      .metric-number-wrap {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+      }
+
+      .video-stories-section {
+        padding: 64px 0;
+      }
+
+      .video-stories-inner,
+      .gallery-inner,
+      .footer-inner {
+        padding: 0 16px;
+      }
+
+      .section-header-center {
+        margin-bottom: 28px;
+        padding: 0 4px;
+      }
+
+      .section-title {
+        font-size: clamp(1.6rem, 7vw, 2.1rem);
+      }
+
+      .video-stories-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .video-story-card {
+        border-radius: var(--radius-md);
+      }
+
+      .gallery-mosaic-section {
+        padding: 64px 0;
+      }
+
+      .gallery-mosaic-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .gallery-item {
+        height: 160px;
+        border-radius: var(--radius-sm);
+      }
+
+      .gallery-item.span-2 {
+        grid-column: span 2;
+        height: 180px;
+      }
+
+      .site-footer {
+        padding: 56px 0 28px;
+      }
+
+      .footer-cta-card {
+        padding: 32px 18px;
+        margin-bottom: 40px;
+        border-radius: var(--radius-md);
+      }
+
+      .footer-huge-headline {
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+      }
+
+      .footer-cta-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .footer-magnetic-cta,
+      .footer-whatsapp-cta {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 18px;
+      }
+
+      .footer-grid-4col {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-bottom: 36px;
+      }
+
+      dialog.expedition-modal {
+        width: min(94vw, 680px);
+        padding: 24px 18px;
+        border-radius: var(--radius-md);
+        max-height: 90vh;
+        overflow-y: auto;
+      }
+
+      .modal-title {
+        font-size: 1.25rem;
+      }
+
+      .destination-chips {
+        gap: 8px;
+      }
+
+      .dest-chip-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .metrics-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .gallery-mosaic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item,
+      .gallery-item.span-2 {
+        grid-column: span 1;
+        height: 200px;
+      }
+
+      #open-inquiry-nav-btn span {
+        display: none;
+      }
+
+      #open-inquiry-nav-btn {
+        padding: 8px 12px;
+      }
+
+      #open-inquiry-nav-btn::before {
+        content: 'Quote';
+      }
+    }
+
+
+    /* Accessibility Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero-container, .manifesto-container, .horizontal-section {
+        height: auto !important;
+      }
+      .hero-sticky-viewport, .horizontal-pin-wrapper {
+        height: auto !important;
+        padding: 80px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Film Grain Texture Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Custom Kinetic Magnetic Cursor -->
+  <div class="custom-cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-follower" id="cursor-follower" aria-hidden="true">
+    <span class="cursor-label">SCROLL</span>
+  </div>
+
+  <!-- FIXED SITE HEADER (ANNOUNCEMENT BAR + FROSTED GLASS NAVBAR) -->
+  <div class="site-header-group" id="site-header-group">
+    <!-- Main Navigation Bar with Official Logo -->
+    <header class="main-nav" id="main-nav">
+      <div class="nav-inner">
+        <a href="https://www.mytourguru.com" class="brand-logo" aria-label="My Tour Guru Holiday Pvt Ltd">
+          <img src="https://www.mytourguru.com/images/logo.png" alt="My Tour Guru Holiday Pvt Ltd Logo" class="brand-logo-img">
+        </a>
+
+        <nav class="nav-destination-pills" aria-label="Destinations">
+          <a href="#andaman" class="nav-pill active">Andaman</a>
+          <a href="#ladakh" class="nav-pill">Ladakh</a>
+          <a href="#kashmir" class="nav-pill">Kashmir</a>
+          <a href="#about-us" class="nav-pill">About Us</a>
+          <a href="#video-stories" class="nav-pill">Reviews</a>
+          <a href="#customer-gallery" class="nav-pill">Gallery</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button class="magnetic-btn" id="open-inquiry-nav-btn">
+            <span>Get A Free Quote</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- ==========================================================================
+       PAGE CONTAINER (ENCLOSING MAIN BODY & FOOTER)
+       ========================================================================== -->
+  <div class="page-container">
+
+    <!-- MAIN SCROLLING CONTENT WRAPPER -->
+    <main class="main-page-wrapper" id="main-content-curtain">
+
+      <!-- ==========================================================================
+           SECTION A: HERO — CINEMATIC VIDEO BACKGROUND & SILKY-SMOOTH SCROLL
+           ========================================================================== -->
+      <section class="hero-container" id="hero-scrub-section" aria-label="Hero Introduction">
+        <div class="hero-sticky-viewport" id="hero-viewport">
+          
+          <!-- Full-Bleed Background Video: Official v2.mp4 from mytourguru.com -->
+          <div class="hero-video-container" id="hero-video-container">
+            <video id="hero-bg-video" class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="https://www.mytourguru.com/images/page1.webp">
+              <source src="v2.mp4" type="video/mp4">
+              <source src="https://www.mytourguru.com/images/v2.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+          </div>
+
+          <!-- Video Control Pill (Pause/Play & Mute/Sound) -->
+          <div class="hero-video-controls" id="hero-video-controls">
+            <button class="video-ctrl-btn" id="video-play-toggle" aria-label="Pause or play video">
+              <i class="fa-solid fa-pause"></i> <span id="video-play-text">Pause</span>
+            </button>
+            <button class="video-ctrl-btn" id="video-sound-toggle" aria-label="Toggle sound">
+              <i class="fa-solid fa-volume-xmark"></i> <span id="video-sound-text">Mute</span>
+            </button>
+          </div>
+
+          <!-- Brand-first cinematic hero -->
+          <div class="hero-content-layer" id="hero-content-layer">
+            <p class="hero-brand-mark" id="hero-brand-mark">My Tour <em>Guru</em></p>
+
+            <h1 class="hero-headline" id="hero-headline">
+              Journeys crafted at the edge of India.
+            </h1>
+
+            <p class="hero-subhead">
+              Certified Destination Management for Andaman, Ladakh &amp; Kashmir — direct local rates, private logistics, and dedicated concierges.
+            </p>
+
+            <div class="hero-cta-group" id="hero-cta-group">
+              <button class="magnetic-btn" id="hero-plan-trip-btn" type="button">
+                <span>Plan Your Journey</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="magnetic-btn secondary" id="hero-explore-btn" type="button">
+                <span>Explore Destinations</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="scroll-down-hud" id="scroll-hud">
+            <div class="scroll-down-mouse">
+              <div class="scroll-down-wheel"></div>
+            </div>
+            <span>Scroll</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Concierge planner & trust metrics (below-fold) -->
+      <section class="concierge-section" id="concierge" aria-label="Trip Concierge">
+        <div class="concierge-inner">
+          <div class="hero-planner-dock" id="hero-planner-dock">
+            <div class="planner-field">
+              <span class="planner-label"><i class="fa-solid fa-compass"></i> Destination</span>
+              <select class="planner-select" id="planner-destination-select" aria-label="Select Destination">
+                <option value="Andaman">Andaman Islands — Havelock &amp; Neil</option>
+                <option value="Ladakh">Leh Ladakh — Pangong &amp; Nubra</option>
+                <option value="Kashmir">Kashmir Valley — Gulmarg &amp; Dal Lake</option>
+              </select>
+            </div>
+
+            <div class="planner-divider"></div>
+
+            <div class="planner-field">
+              <span class="planner-label"><i class="fa-solid fa-users"></i> Travel Style</span>
+              <select class="planner-select" id="planner-type-select" aria-label="Select Travel Style">
+                <option value="Couple / Honeymoon">Couple / Honeymoon</option>
+                <option value="Family Vacation">Family Holiday</option>
+                <option value="Group Expedition">Group Expedition</option>
+              </select>
+            </div>
+
+            <div class="planner-divider"></div>
+
+            <div class="planner-field">
+              <span class="planner-label"><i class="fa-solid fa-clock"></i> Duration</span>
+              <select class="planner-select" id="planner-duration-select" aria-label="Select Duration">
+                <option value="5N / 6D Best Seller">5 Nights / 6 Days</option>
+                <option value="6N / 7D Complete">6 Nights / 7 Days</option>
+                <option value="8N / 9D Grand">8 Nights / 9 Days</option>
+              </select>
+            </div>
+
+            <div class="planner-action-wrap">
+              <button class="planner-submit-btn" id="concierge-plan-btn" type="button">
+                <span>Get a Quote</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-quick-destinations" id="hero-quick-destinations">
+            <span class="quick-dest-kicker">Destinations</span>
+            <a href="#andaman" class="quick-dest-chip">
+              <span class="chip-dot andaman-dot"></span>
+              <span class="chip-title">Andaman</span>
+              <span class="chip-sub">Havelock &amp; Neil</span>
+              <span class="chip-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="#ladakh" class="quick-dest-chip">
+              <span class="chip-dot ladakh-dot"></span>
+              <span class="chip-title">Ladakh</span>
+              <span class="chip-sub">Pangong &amp; Nubra</span>
+              <span class="chip-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+            <a href="#kashmir" class="quick-dest-chip">
+              <span class="chip-dot kashmir-dot"></span>
+              <span class="chip-title">Kashmir</span>
+              <span class="chip-sub">Gulmarg &amp; Dal Lake</span>
+              <span class="chip-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </a>
+          </div>
+
+          <div class="hero-meta-strip" id="hero-meta-strip">
+            <div class="hero-meta-item">
+              <div class="hero-meta-top">
+                <span class="hero-meta-val">10+</span>
+                <span class="hero-meta-unit">Years</span>
+              </div>
+              <span class="hero-meta-lbl">Domestic DMC Expertise</span>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-top">
+                <span class="hero-meta-val">30–50%</span>
+                <span class="hero-meta-unit">Saved</span>
+              </div>
+              <span class="hero-meta-lbl">Direct DMC Rates</span>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-top">
+                <span class="hero-meta-val">Govt.</span>
+                <span class="hero-meta-unit">Approved</span>
+              </div>
+              <span class="hero-meta-lbl">Recognized Operator</span>
+            </div>
+            <div class="hero-meta-item">
+              <div class="hero-meta-top">
+                <span class="hero-meta-val">4.9</span>
+                <span class="hero-meta-unit">Rating</span>
+              </div>
+              <span class="hero-meta-lbl">500+ Verified Reviews</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION BRIDGE — PARALLAX TRANSITION INTO ABOUT
+           ========================================================================== -->
+      <section class="section-bridge" id="section-bridge" aria-label="Journey transition">
+        <div class="section-bridge-media" data-parallax-bg>
+          <img
+            src="https://www.mytourguru.com/images/page1.webp"
+            alt=""
+            decoding="async"
+            loading="lazy"
+          >
+        </div>
+        <div class="section-bridge-scrim" aria-hidden="true"></div>
+        <div class="section-bridge-content" data-parallax-fg>
+          <p class="section-bridge-eyebrow">Beyond the itinerary</p>
+          <h2 class="section-bridge-title">The ground team behind <em>every mile</em></h2>
+          <div class="section-bridge-line" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION B: ABOUT US & PHILOSOPHY — EDITORIAL SPLIT GRID (FROM MYTOURGURU.COM)
+           ========================================================================== -->
+      <section class="manifesto-container" id="about-us" aria-label="About My Tour Guru">
+        <div class="manifesto-ambient-glow" aria-hidden="true"></div>
+        <div class="manifesto-inner">
+          
+          <div class="about-split-grid">
+            <div class="about-text-col">
+              <div class="manifesto-pre-label">About My Tour Guru</div>
+              
+              <h2 class="manifesto-main-title">
+                On-ground experts across Andaman, Ladakh &amp; Kashmir
+              </h2>
+
+              <p class="manifesto-core-statement">
+                <span class="highlight-cyan">Mytourguru.com</span> is a part of <strong>My Tour Guru Holiday Pvt. Ltd.</strong> A complete Destination Management Company (DMC) teamed by hardcore professionals with average experience of 10 years in Domestic travel, approved by the Government of India.
+              </p>
+
+              <p class="manifesto-core-statement" style="font-size: 0.95rem; margin-top: -10px;">
+                We are based out in Andaman with branch office in Delhi and Ladakh. Coming up in Pune. Providing the Best travel experience to our clients is our ultimate goal and to achieve that we believe in honest commitment.
+              </p>
+
+              <div class="about-highlights-list">
+                <div class="about-highlight-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Approved DMC:</strong> Recognized by the Government of India with physical offices across Port Blair, Delhi, and Ladakh.</span>
+                </div>
+                <div class="about-highlight-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>Direct Local Pricing:</strong> Save 30% to 50% by booking directly with the on-ground DMC without intermediaries.</span>
+                </div>
+                <div class="about-highlight-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span><strong>End-to-End Coordination:</strong> Dedicated private ferry passes, high-altitude oxygen backup, 24/7 personal tour managers.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Media visual featuring official images about.avif & management.webp -->
+            <div class="about-media-col">
+              <div class="about-media-card-main">
+                <img src="https://www.mytourguru.com/images/about.avif" 
+                     alt="My Tour Guru Destination Management" 
+                     loading="lazy">
+                <div class="about-media-overlay-badge">
+                  <div class="about-badge-icon"><i class="fa-solid fa-compass"></i></div>
+                  <div>
+                    <div class="about-badge-title">10+ Years of Domestic Travel</div>
+                    <div class="about-badge-sub">Port Blair HQ • Shey Palace Leh • New Delhi</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Secondary Floating Team Badge -->
+              <div class="about-secondary-card">
+                <img src="https://www.mytourguru.com/images/management.webp" 
+                     alt="My Tour Guru Management Team" 
+                     loading="lazy">
+                <span class="about-secondary-tag">Core Management Team</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Geographic Frontiers Cards -->
+          <div class="manifesto-territories-grid">
+            
+            <!-- Territory 1: Andaman -->
+            <div class="territory-card">
+              <div>
+                <div class="territory-card-header">
+                  <div class="territory-icon"><i class="fa-solid fa-water"></i></div>
+                  <span class="territory-coords">PORT BLAIR HQ • GOAL GHAR</span>
+                </div>
+                <h3 class="territory-name">Andaman Tour Packages</h3>
+                <p class="territory-desc">
+                  30% Off on exclusive Andaman & Nicobar tour packages. Covering Port Blair, Havelock Island, and Neil Island. Cellular Jail light & sound show, Radhanagar Beach sunsets, scuba diving at Elephant Beach, and private catamaran ferry tickets.
+                </p>
+              </div>
+            </div>
+
+            <!-- Territory 2: Ladakh -->
+            <div class="territory-card">
+              <div>
+                <div class="territory-card-header">
+                  <div class="territory-icon"><i class="fa-solid fa-mountain"></i></div>
+                  <span class="territory-coords">LEH BRANCH • SHEY PALACE</span>
+                </div>
+                <h3 class="territory-name">Leh Ladakh Tour Packages</h3>
+                <p class="territory-desc">
+                  Best selling Leh Ladakh tour packages up to 50% Off. Amazing Leh with Nubra & Pangong, Khardung La Pass (18,380 ft), Hunder double-humped camel dunes, Diskit Monastery, and starlit camps beside Pangong Tso with medical oxygen support.
+                </p>
+              </div>
+            </div>
+
+            <!-- Territory 3: Kashmir -->
+            <div class="territory-card">
+              <div>
+                <div class="territory-card-header">
+                  <div class="territory-icon"><i class="fa-solid fa-snowflake"></i></div>
+                  <span class="territory-coords">VALLEY OF KASHMIR • SRINAGAR</span>
+                </div>
+                <h3 class="territory-name">Jammu & Kashmir Packages</h3>
+                <p class="territory-desc">
+                  Valley of Kashmir and Splendid Kashmir packages. Dal Lake traditional wooden houseboat stays, dawn Shikara rides, Gulmarg Gondola Phase 1 & 2 tickets, and pine valley excursions through Pahalgam and Betaab Valley.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3-Step Process directly from mytourguru.com -->
+          <div class="manifesto-credo-bar">
+            <div class="credo-text">
+              <strong>How It Works:</strong> <span>1. Choose Destinations</span> • <span>2. Customise Your Package</span> • <span>3. Get The Best Deal & Explore</span>
+            </div>
+            <div class="credo-badges">
+              <span class="credo-pill"><i class="fa-solid fa-shield-halved"></i> Approved by Govt. of India</span>
+              <span class="credo-pill"><i class="fa-solid fa-location-dot"></i> Port Blair, Delhi & Leh Offices</span>
+              <span class="credo-pill"><i class="fa-solid fa-phone"></i> Call: 07290000939</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION C: FEATURES SHOWCASE — HORIZONTAL SCROLL & REAL PACKAGES (FROM MYTOURGURU.COM)
+           ========================================================================== -->
+      <section class="horizontal-section" id="expeditions-track" aria-label="Official Tour Packages">
+        <div class="horizontal-pin-wrapper" id="horizontal-pin-wrapper">
+          
+          <!-- Floating HUD Header -->
+          <div class="horizontal-hud">
+            <div class="hud-title-wrap">
+              <span class="hud-subtitle">Curated Expeditions</span>
+              <h3 class="hud-title">Best-selling tour packages</h3>
+            </div>
+            <div class="hud-counter-wrap">
+              <span class="hud-current-index" id="hud-current-index">01</span>
+              <span class="hud-divider">/</span>
+              <span class="hud-total">06</span>
+              <div class="hud-progress-line-container">
+                <div class="hud-progress-line-bar" id="hud-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horizontal Track with Official Scraped Packages & Images -->
+          <div class="horizontal-track" id="horizontal-track">
+            
+            <!-- Card 01: Andaman Budget Package (a9.webp) -->
+            <article class="expedition-card" id="andaman" data-index="1">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">ANDAMAN PACKAGES</span>
+                <span class="card-discount-tag">30% OFF • *T&C APPLY</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/a9.webp" 
+                     alt="Andaman Budget Package" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 03 NIGHTS / 04 DAYS</span>
+                    <span><i class="fa-solid fa-water"></i> PORT BLAIR & ISLANDS</span>
+                  </div>
+                  <h4 class="card-headline">Andaman Budget package</h4>
+                  <p class="card-description">
+                    Explore the best India holiday packages for families with affordable tours, comfortable stays, and unforgettable travel experiences across top destinations.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹9,000/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹11,000/-</span>
+                    <span class="card-feature-pill">Premium: ₹12,500/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Starting From</span>
+                    <span class="card-price-value">₹9,000 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Andaman">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 02: Andaman Neil Havelock (a7.webp) -->
+            <article class="expedition-card" id="andaman-neil" data-index="2">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">ANDAMAN PACKAGES</span>
+                <span class="card-discount-tag">30% OFF • BEST SELLER</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/a7.webp" 
+                     alt="Andaman Neil Havelock Tour Package" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 04 NIGHTS / 05 DAYS</span>
+                    <span><i class="fa-solid fa-ship"></i> PORT BLAIR • NEIL • HAVELOCK</span>
+                  </div>
+                  <h4 class="card-headline">Andaman Neil Havelock</h4>
+                  <p class="card-description">
+                    04 Nights / 05 Days island odyssey. Radhanagar Beach, Bharatpur Beach natural coral bridge, scuba diving at Elephant Beach, and private Makruzz ferry passes.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹12,000/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹15,000/-</span>
+                    <span class="card-feature-pill">Premium: ₹16,500/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Starting From</span>
+                    <span class="card-price-value">₹12,000 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Andaman">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 03: Amazing Leh with Nubra & Pangong (l9.webp) -->
+            <article class="expedition-card" id="ladakh" data-index="3">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">LEH LADAKH PACKAGES</span>
+                <span class="card-discount-tag">50% OFF • GROUP TOUR</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/l9.webp" 
+                     alt="Amazing Leh with Nubra & Pangong - Group Tour" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 05 NIGHTS / 06 DAYS</span>
+                    <span><i class="fa-solid fa-mountain"></i> LEH • NUBRA • PANGONG</span>
+                  </div>
+                  <h4 class="card-headline">Amazing Leh with Nubra & Pangong</h4>
+                  <p class="card-description">
+                    Best Selling Leh Ladakh Tour Package. High-altitude mountain passes of Khardung La, Hunder sand dunes camel safari, and camp stay beside Pangong Tso with medical oxygen support.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹14,999/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹18,500/-</span>
+                    <span class="card-feature-pill">Premium: ₹22,500/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Special Group</span>
+                    <span class="card-price-value">₹14,999 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Ladakh">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 04: Ladakh 4 nights (l8.webp) -->
+            <article class="expedition-card" id="ladakh-short" data-index="4">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">LEH LADAKH PACKAGES</span>
+                <span class="card-discount-tag">40% OFF • LEH SHORT ESCAPE</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/l8.webp" 
+                     alt="Ladakh 4 nights" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 04 NIGHTS / 05 DAYS</span>
+                    <span><i class="fa-solid fa-compass"></i> LEH • SHAM VALLEY • KHARDUNG LA</span>
+                  </div>
+                  <h4 class="card-headline">Ladakh 4 nights</h4>
+                  <p class="card-description">
+                    Perfect short mountain getaway. Acclimatization at Leh, Hall of Fame, Magnetic Hill, confluence of Indus & Zanskar rivers, and day excursion to Khardung La.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹12,500/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹15,000/-</span>
+                    <span class="card-feature-pill">Premium: ₹18,000/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Starting From</span>
+                    <span class="card-price-value">₹12,500 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Ladakh">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 05: Kashmir with Gulmar and Phalgam (k5.webp) -->
+            <article class="expedition-card" id="kashmir" data-index="5">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">JAMMU & KASHMIR PACKAGES</span>
+                <span class="card-discount-tag">30% OFF • BEST SELLER</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/k5.webp" 
+                     alt="Kashmir with Gulmar and Phalgam" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 05 NIGHTS / 06 DAYS</span>
+                    <span><i class="fa-solid fa-snowflake"></i> SRINAGAR • GULMARG • PAHALGAM</span>
+                  </div>
+                  <h4 class="card-headline">Kashmir with Gulmar and Phalgam</h4>
+                  <p class="card-description">
+                    Best Selling Jammu & Kashmir Tour Package. Dal Lake Shikara ride, stay in handcrafted wooden houseboats, Gulmarg Gondola excursion, and the lush pine valleys of Pahalgam.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹16,500/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹22,000/-</span>
+                    <span class="card-feature-pill">Premium: ₹27,000/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Starting From</span>
+                    <span class="card-price-value">₹16,500 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Kashmir">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 06: Valley of Kashmir (k7.webp) -->
+            <article class="expedition-card" id="kashmir-valley" data-index="6">
+              <div class="card-media-wrapper">
+                <span class="card-badge-floating">JAMMU & KASHMIR PACKAGES</span>
+                <span class="card-discount-tag">30% OFF • HOUSEBOAT SPECIAL</span>
+                <img src="https://www.mytourguru.com/database/packages/uploads/k7.webp" 
+                     alt="Valley of Kashmir Tour Package" 
+                     class="card-parallax-img"
+                     loading="lazy">
+              </div>
+              <div class="card-info-content">
+                <div>
+                  <div class="card-meta-top">
+                    <span><i class="fa-regular fa-clock"></i> 04 NIGHTS / 05 DAYS</span>
+                    <span><i class="fa-solid fa-water"></i> SRINAGAR • GULMARG • SONAMARG</span>
+                  </div>
+                  <h4 class="card-headline">Valley of Kashmir</h4>
+                  <p class="card-description">
+                    Immerse in the breathtaking beauty of Kashmir. Mughal gardens of Nishat & Shalimar, traditional Dal Lake Shikara experience, and snowy heights of Gulmarg.
+                  </p>
+                  <div class="card-feature-pills">
+                    <span class="card-feature-pill">Deluxe: ₹13,500/-</span>
+                    <span class="card-feature-pill">S-Deluxe: ₹17,000/-</span>
+                    <span class="card-feature-pill">Premium: ₹21,000/-</span>
+                  </div>
+                </div>
+                <div class="card-footer-action">
+                  <div class="card-price-block">
+                    <span class="card-price-label">Deluxe Starting From</span>
+                    <span class="card-price-value">₹13,500 <span>/ Person</span></span>
+                  </div>
+                  <button class="magnetic-btn card-inquire-btn" data-destination="Kashmir">
+                    <span>Get This Package</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION D: METRICS & VELOCITY-REACTIVE MARQUEE
+           ========================================================================== -->
+      <section class="metrics-section" id="metrics-section" aria-label="Metrics & Testimonials">
+        
+        <!-- Dual-direction text strip above DMC header -->
+        <div class="marquee-container" id="marquee-container" aria-hidden="true">
+          <div class="marquee-row is-rtl" id="marquee-row-1">
+            <div class="marquee-content">
+              <span>Explore · Experience · Embrace</span> <span class="marquee-dot"></span>
+              <span class="highlight">Andaman · Ladakh · Kashmir</span> <span class="marquee-dot"></span>
+              <span>Approved by Govt. of India</span> <span class="marquee-dot"></span>
+              <span class="highlight">Direct DMC Rates</span> <span class="marquee-dot"></span>
+              <span>10+ Years On Ground</span> <span class="marquee-dot"></span>
+              <span>Port Blair · Delhi · Leh</span> <span class="marquee-dot"></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+              <span>Explore · Experience · Embrace</span> <span class="marquee-dot"></span>
+              <span class="highlight">Andaman · Ladakh · Kashmir</span> <span class="marquee-dot"></span>
+              <span>Approved by Govt. of India</span> <span class="marquee-dot"></span>
+              <span class="highlight">Direct DMC Rates</span> <span class="marquee-dot"></span>
+              <span>10+ Years On Ground</span> <span class="marquee-dot"></span>
+              <span>Port Blair · Delhi · Leh</span> <span class="marquee-dot"></span>
+            </div>
+          </div>
+
+          <div class="marquee-row is-ltr" id="marquee-row-2">
+            <div class="marquee-content">
+              <span class="highlight">Andaman Tour Packages</span> <span class="marquee-dot"></span>
+              <span>Leh · Nubra · Pangong</span> <span class="marquee-dot"></span>
+              <span class="highlight">Kashmir · Gulmarg · Dal Lake</span> <span class="marquee-dot"></span>
+              <span>Havelock · Neil · Port Blair</span> <span class="marquee-dot"></span>
+              <span class="highlight">Private Logistics</span> <span class="marquee-dot"></span>
+              <span>Dedicated Concierge</span> <span class="marquee-dot"></span>
+            </div>
+            <div class="marquee-content" aria-hidden="true">
+              <span class="highlight">Andaman Tour Packages</span> <span class="marquee-dot"></span>
+              <span>Leh · Nubra · Pangong</span> <span class="marquee-dot"></span>
+              <span class="highlight">Kashmir · Gulmarg · Dal Lake</span> <span class="marquee-dot"></span>
+              <span>Havelock · Neil · Port Blair</span> <span class="marquee-dot"></span>
+              <span class="highlight">Private Logistics</span> <span class="marquee-dot"></span>
+              <span>Dedicated Concierge</span> <span class="marquee-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-inner">
+          <div class="metrics-header">
+            <span class="sub-badge">DESTINATION MANAGEMENT COMPANY</span>
+            <h2>MY TOUR GURU HOLIDAY PVT. LTD.</h2>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 14px; line-height: 1.6;">
+              A complete Destination Management Company (DMC) teamed by hardcore professionals with average experience of 10 years in Domestic travel, approved by the Government of India.
+            </p>
+          </div>
+
+          <!-- Slot-Machine Ticker Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-number-wrap">
+                <span class="metric-odometer" data-target="10" data-suffix="+">0</span>
+              </div>
+              <div class="metric-label">Years Average Experience</div>
+              <div class="metric-desc">Hardcore professionals with average experience of 10 years in Domestic travel.</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-number-wrap">
+                <span class="metric-odometer" data-target="30" data-suffix="%">0</span>
+              </div>
+              <div class="metric-label">Exclusive Tour Discount</div>
+              <div class="metric-desc">Direct DMC benefit offering up to 30% to 50% discount on Andaman, Ladakh & Kashmir.</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-number-wrap">
+                <span class="metric-odometer" data-target="9000" data-prefix="₹" data-suffix="/-">0</span>
+              </div>
+              <div class="metric-label">Starting Package Price</div>
+              <div class="metric-desc">Affordable tours, comfortable stays, and unforgettable travel experiences for families.</div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-number-wrap">
+                <span class="metric-odometer" data-target="3" data-suffix=" Offices">0</span>
+              </div>
+              <div class="metric-label">Direct Branch Network</div>
+              <div class="metric-desc">Based out in Andaman with branch office in Delhi and Ladakh. Coming up in Pune.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION E: VIDEO REVIEWS & STORIES (FROM MYTOURGURU.COM)
+           ========================================================================== -->
+      <section class="video-stories-section" id="video-stories" aria-label="Customer Video Reviews">
+        <div class="video-stories-inner">
+          <div class="section-header-center">
+            <span class="section-eyebrow">Verified travel experiences</span>
+            <h3 class="section-title">What our travelers say</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 10px;">
+              Real stories and candid reviews from voyagers who explored Andaman, Ladakh, and Kashmir with My Tour Guru.
+            </p>
+          </div>
+
+          <div class="video-stories-grid">
+            <!-- Review 1: Andaman (yt4.webp) -->
+            <div class="video-story-card">
+              <div class="video-thumb-wrap">
+                <span class="video-badge-tag"><i class="fa-solid fa-water"></i> Andaman Tour</span>
+                <img src="https://www.mytourguru.com/images/yt-thumb/yt4.webp" 
+                     alt="Andaman Traveler Review Video Thumbnail" 
+                     class="video-thumb-img"
+                     loading="lazy">
+                <a href="https://www.youtube.com/watch?v=mytourguru" target="_blank" rel="noopener noreferrer" class="video-play-btn" aria-label="Play video review">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+              <div class="video-story-content">
+                <div>
+                  <h4 class="video-story-title">Havelock & Neil Island Holiday</h4>
+                  <p class="video-story-desc">
+                    "From port pickup to luxury ferry tickets at Havelock and Neil Island, everything was seamless. Truly the best local travel agency for Andaman!"
+                  </p>
+                </div>
+                <div class="video-story-author">
+                  <div class="video-author-avatar">AS</div>
+                  <div>
+                    <div class="video-author-name">Dr. Ananya Sen & Family</div>
+                    <div class="video-author-meta">Andaman 05 Nights / 06 Days Package</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2: Ladakh (img1.avif) -->
+            <div class="video-story-card">
+              <div class="video-thumb-wrap">
+                <span class="video-badge-tag"><i class="fa-solid fa-mountain"></i> Ladakh Group Tour</span>
+                <img src="https://www.mytourguru.com/images/yt-thumb/img1.avif" 
+                     alt="Ladakh Traveler Review Video Thumbnail" 
+                     class="video-thumb-img"
+                     loading="lazy">
+                <a href="https://www.youtube.com/watch?v=mytourguru" target="_blank" rel="noopener noreferrer" class="video-play-btn" aria-label="Play video review">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+              <div class="video-story-content">
+                <div>
+                  <h4 class="video-story-title">Amazing Leh, Nubra & Pangong</h4>
+                  <p class="video-story-desc">
+                    "The group tour was organized perfectly. Experienced mountain drivers, oxygen support, and great tents at Pangong Lake. Highly recommended!"
+                  </p>
+                </div>
+                <div class="video-story-author">
+                  <div class="video-author-avatar">VS</div>
+                  <div>
+                    <div class="video-author-name">Vikram Singhania & Friends</div>
+                    <div class="video-author-meta">Amazing Leh Group Tour (5N/6D)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3: Kashmir (yt2.webp) -->
+            <div class="video-story-card">
+              <div class="video-thumb-wrap">
+                <span class="video-badge-tag"><i class="fa-solid fa-snowflake"></i> Kashmir Honeymoon</span>
+                <img src="https://www.mytourguru.com/images/yt-thumb/yt2.webp" 
+                     alt="Kashmir Traveler Review Video Thumbnail" 
+                     class="video-thumb-img"
+                     loading="lazy">
+                <a href="https://www.youtube.com/watch?v=mytourguru" target="_blank" rel="noopener noreferrer" class="video-play-btn" aria-label="Play video review">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+              <div class="video-story-content">
+                <div>
+                  <h4 class="video-story-title">Kashmir Houseboat & Gulmarg Snow</h4>
+                  <p class="video-story-desc">
+                    "Direct DMC rates with 30% savings. The Dal Lake houseboat stay in Srinagar and Gulmarg Gondola Phase 2 tickets were arranged effortlessly."
+                  </p>
+                </div>
+                <div class="video-story-author">
+                  <div class="video-author-avatar">PR</div>
+                  <div>
+                    <div class="video-author-name">Priya & Rohan Mehra</div>
+                    <div class="video-author-meta">Splendid Kashmir Tour (6N/7D)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION F: OUR HAPPIEST CUSTOMERS GALLERY (FROM MYTOURGURU.COM)
+           ========================================================================== -->
+      <section class="gallery-mosaic-section" id="customer-gallery" aria-label="Customer Photo Gallery">
+        <div class="gallery-inner">
+          <div class="section-header-center">
+            <span class="section-eyebrow">Traveler gallery</span>
+            <h3 class="section-title">Memories crafted across India</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 10px;">
+              Snapshots from real travelers exploring the beaches of Andaman, mountains of Ladakh, and valleys of Kashmir.
+            </p>
+          </div>
+
+          <div class="gallery-mosaic-grid">
+            <div class="gallery-item span-2">
+              <img src="https://www.mytourguru.com/images/customer/img1.webp" alt="Customer Group in Andaman" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Port Blair Historical Tour</div>
+                  <span class="gallery-location-tag">Cellular Jail & Coral Cove</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://www.mytourguru.com/images/customer/img2.webp" alt="Happy couple in Havelock" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Havelock Beach Bliss</div>
+                  <span class="gallery-location-tag">Radhanagar Beach No. 7</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://www.mytourguru.com/images/customer/img3.webp" alt="Voyagers at Pangong Tso" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Pangong Tso Blue Waters</div>
+                  <span class="gallery-location-tag">Leh Ladakh 14,270 ft</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://www.mytourguru.com/images/customer/img4.webp" alt="Bikers at Khardung La Pass" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Khardung La Pass Summit</div>
+                  <span class="gallery-location-tag">Highest Motorable Road</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item span-2">
+              <img src="https://www.mytourguru.com/images/customer/img5.webp" alt="Dal Lake Shikara Ride" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Dal Lake Wooden Shikara</div>
+                  <span class="gallery-location-tag">Srinagar, Kashmir</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://www.mytourguru.com/images/customer/img6.webp" alt="Snow adventure in Gulmarg" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Gulmarg Gondola Excursion</div>
+                  <span class="gallery-location-tag">Aphrawat Peak Snow</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="https://www.mytourguru.com/images/customer/img7.webp" alt="Scuba Diving in Andaman" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Elephant Beach Scuba</div>
+                  <span class="gallery-location-tag">Live Coral Reefs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item span-2">
+              <img src="https://www.mytourguru.com/images/customer/img8.webp" alt="Family Vacation in Neil Island" class="gallery-img" loading="lazy">
+              <div class="gallery-overlay">
+                <div>
+                  <div class="gallery-caption">Neil Island Sunset & Corals</div>
+                  <span class="gallery-location-tag">Bharatpur & Laxmanpur Beach</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main> <!-- End of .main-page-wrapper -->
+
+    <!-- ==========================================================================
+         SECTION G: FOOTER — MODERN LUXURY FOOTER (OFFICIAL MY TOUR GURU CONTENT)
+         ========================================================================== -->
+    <footer class="site-footer" id="site-footer" aria-label="Footer Navigation">
+      <div class="footer-bg-glow" aria-hidden="true"></div>
+
+      <div class="footer-inner">
+        <!-- Top CTA Banner -->
+        <div class="footer-cta-card">
+          <div class="footer-badge">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>Begin your expedition</span>
+          </div>
+
+          <h2 class="footer-huge-headline">Ready for an unforgettable journey?</h2>
+          
+          <p class="footer-sub">
+            Custom itineraries across Andaman, Ladakh, and Kashmir — with on-ground DMC expertise, direct local pricing, and a dedicated concierge from the moment you enquire.
+          </p>
+
+          <div class="footer-cta-actions">
+            <button class="footer-magnetic-cta" id="footer-inquire-btn">
+              <span>Request a Quote</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <a href="https://api.whatsapp.com/send?phone=917063911703&text=Hello%20My%20Tour%20Guru%2C%20please%20send%20the%20best%20tour%20deals" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="footer-whatsapp-cta">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Chat on WhatsApp</span>
+            </a>
+            <a href="tel:07290000939" class="footer-whatsapp-cta" style="border-color: rgba(166, 124, 82, 0.45); color: var(--accent-gold);">
+              <i class="fa-solid fa-phone"></i>
+              <span>Call 07290000939</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4-Column Information Grid -->
+        <div class="footer-grid-4col">
+          <!-- Col 1: About DMC & Socials -->
+          <div class="footer-col">
+            <img src="https://www.mytourguru.com/images/logo.png" alt="My Tour Guru Holiday Pvt Ltd" style="height: 44px; width: auto; margin-bottom: 16px; display: block;">
+            <p class="footer-about-text">
+              <strong>My Tour Guru Holiday Pvt. Ltd.</strong> is a premier Destination Management Company (DMC) approved by the Government of India. Teamed by hardcore professionals with average experience of 10 years in Domestic travel.
+            </p>
+            <p class="footer-about-text" style="font-size: 0.8rem; color: var(--accent-cyan); margin-bottom: 16px;">
+              <i class="fa-solid fa-certificate"></i> Approved by Govt. of India • Direct DMC
+            </p>
+            <div class="footer-social-row">
+              <a href="https://www.facebook.com/mytourguru/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://www.instagram.com/mytourguru/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://in.linkedin.com/showcase/my-tour-guru" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://youtube.com/@mytourguruholidaypvtltd4764?si=7hNl4emqLnQI-_-L" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Quick Links & Official Policies -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links-list">
+              <li><a href="#about-us"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+              <li><a href="#andaman"><i class="fa-solid fa-angle-right"></i> Andaman Packages</a></li>
+              <li><a href="#ladakh"><i class="fa-solid fa-angle-right"></i> Ladakh Group Tours</a></li>
+              <li><a href="#kashmir"><i class="fa-solid fa-angle-right"></i> Kashmir Holidays</a></li>
+              <li><a href="https://www.mytourguru.com/blog" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> Travel Blogs</a></li>
+              <li><a href="https://www.mytourguru.com/policy.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> Terms and Condition</a></li>
+              <li><a href="https://www.mytourguru.com/policy.php#cancelation-policy" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> Cancelation Policy</a></li>
+              <li><a href="https://www.mytourguru.com/policy.php#payment-policy" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> Payment Policy</a></li>
+              <li><a href="https://www.mytourguru.com/policy.php#privacy-policy" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-angle-right"></i> Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Direct Regional Offices & Contacts -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Contact & Offices</h4>
+            <ul class="footer-contact-list">
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); display: block;">Call Us</span>
+                  <a href="tel:07290000939">07290000939</a>
+                </div>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.45); display: block;">Email Support</span>
+                  <a href="mailto:sales@mytourguru.com">sales@mytourguru.com</a>
+                </div>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong style="color: #FFFFFF;">Andaman Head Office:</strong><br>
+                  No 22, Church Lane Carmel, School Road, Goal Ghar, Port Blair, Andaman & Nicobar Islands (744101)
+                </div>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong style="color: #FFFFFF;">Ladakh Branch Office:</strong><br>
+                  Shop No 21, Leh Manali Hwy, near Shey Palace, Leh, Ladakh (194104)
+                </div>
+              </li>
+              <li class="footer-contact-item">
+                <i class="fa-solid fa-building"></i>
+                <div>
+                  <strong style="color: #FFFFFF;">Branch Network:</strong><br>
+                  Delhi Branch Office • Coming up in Pune
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Weekly Newsletter & Online Payment -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Newsletter</h4>
+            <div class="newsletter-box">
+              <p class="newsletter-desc">
+                Subscribe for exclusive flash deals, 30%–50% off holiday discounts, and domestic travel updates.
+              </p>
+              <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); document.getElementById('newsletter-status').style.display='block'; this.reset();">
+                <input type="text" class="newsletter-input" placeholder="Your Name" required>
+                <input type="email" class="newsletter-input" placeholder="Your Email Address" required>
+                <button type="submit" class="newsletter-submit-btn">
+                  <span>Subscribe Now</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              <div id="newsletter-status" style="display: none; font-size: 0.78rem; color: #10B981; font-weight: 600; margin-top: 4px;">
+                <i class="fa-solid fa-circle-check"></i> Thank you! You are subscribed to My Tour Guru updates.
+              </div>
+
+              <!-- Direct Payment Link -->
+              <div class="footer-pay-banner">
+                <div>
+                  <div style="font-size: 0.72rem; color: rgba(255,255,255,0.6); text-transform: uppercase;">Official Portal</div>
+                  <a href="https://www.mytourguru.com/payment.php" target="_blank" rel="noopener noreferrer" class="footer-pay-link">
+                    <i class="fa-solid fa-credit-card"></i> Pay Online Now &rarr;
+                  </a>
+                </div>
+                <i class="fa-brands fa-cc-visa" style="font-size: 1.5rem; color: rgba(255,255,255,0.4);"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright & Back to Top Bar -->
+        <div class="footer-bottom-bar">
+          <div class="footer-copyright">
+            &copy; Copyright 2024 <a href="https://www.mytourguru.com/" style="color: #FFFFFF; font-weight: 700;">My Tour Guru Holiday Pvt Ltd</a>. All Rights Reserved.
+          </div>
+
+          <div class="footer-accreditation">
+            <i class="fa-solid fa-shield-halved"></i> Approved by Government of India DMC
+          </div>
+
+          <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to top of page">
+            <span>Back To Top</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+  </div> <!-- End of .page-container -->
+
+  <!-- ==========================================================================
+       EXPEDITION INQUIRY MODAL (<dialog>) — MATCHING MYTOURGURU.COM FORM
+       ========================================================================== -->
+  <dialog class="expedition-modal" id="inquiry-dialog" aria-labelledby="modal-heading">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-heading">Request a private quote</h3>
+      <button class="modal-close-btn" id="modal-close-x-btn" aria-label="Close dialog">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <form method="dialog" id="expedition-inquiry-form" class="modal-form-grid">
+      <div class="form-group">
+        <label>Destination *</label>
+        <div class="destination-chips" id="modal-dest-chips">
+          <button type="button" class="dest-chip-btn selected" data-value="Andaman">Andaman</button>
+          <button type="button" class="dest-chip-btn" data-value="Ladakh">Ladakh</button>
+          <button type="button" class="dest-chip-btn" data-value="Kashmir">Kashmir</button>
+          <button type="button" class="dest-chip-btn" data-value="Kerala">Kerala</button>
+          <button type="button" class="dest-chip-btn" data-value="Manali">Manali</button>
+        </div>
+        <input type="hidden" name="destination" id="selected-dest-input" value="Andaman">
+      </div>
+
+      <div class="form-group">
+        <label for="inquirer-name">Name *</label>
+        <input type="text" id="inquirer-name" class="form-control" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="inquirer-phone">Phone Number *</label>
+        <input type="tel" id="inquirer-phone" class="form-control" placeholder="Enter your phone or WhatsApp number" required>
+      </div>
+
+      <div class="form-group">
+        <label for="inquirer-email">Email *</label>
+        <input type="email" id="inquirer-email" class="form-control" placeholder="Enter your email address">
+      </div>
+
+      <div class="form-group">
+        <label for="inquirer-travelers">Number of Nights / Adults / Start Date</label>
+        <input type="text" id="inquirer-travelers" class="form-control" placeholder="e.g. 5 Nights, 2 Adults, Start Date: Nov 2024">
+      </div>
+
+      <p style="font-size: 0.74rem; color: var(--text-muted); line-height: 1.5; margin-top: -4px;">
+        We assure the privacy of your contact data. This data will only be used by our team to contact you and no other purposes.
+      </p>
+
+      <button type="submit" class="modal-submit-btn">
+        <span>SUBMIT & GET BEST DEALS</span>
+        <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+      </button>
+    </form>
+  </dialog>
+
+  <!-- ==========================================================================
+       SCRIPTS: LENIS SMOOTH SCROLL + GSAP KINETIC TIMELINE ARCHITECTURE
+       ========================================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <script>
+    /* ==========================================================================
+       1. SMOOTH SCROLL PROVIDER (LENIS + GSAP TICKER SYNC)
+       ========================================================================== */
+    gsap.registerPlugin(ScrollTrigger);
+
+    const lenis = new Lenis({
+      duration: 1.15,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.5,
+      infinite: false,
+    });
+
+    lenis.on('scroll', ScrollTrigger.update);
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    /* ==========================================================================
+       2. CUSTOM KINETIC MAGNETIC CURSOR
+       ========================================================================== */
+    const cursorDot = document.getElementById('cursor-dot');
+    const cursorFollower = document.getElementById('cursor-follower');
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let followerX = mouseX;
+    let followerY = mouseY;
+    let cursorRevealed = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!cursorRevealed) {
+        cursorRevealed = true;
+        cursorDot.style.opacity = '1';
+        cursorFollower.style.opacity = '1';
+      }
+      cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+    }, { passive: true });
+
+    gsap.ticker.add(() => {
+      followerX += (mouseX - followerX) * 0.16;
+      followerY += (mouseY - followerY) * 0.16;
+      cursorFollower.style.transform = `translate(${followerX}px, ${followerY}px)`;
+    });
+
+    const interactiveElements = document.querySelectorAll('button, a, input, .expedition-card, .dest-chip-btn, .video-story-card, .gallery-item, .video-ctrl-btn, .footer-social-btn');
+    interactiveElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    const horizontalSection = document.getElementById('expeditions-track');
+    if (horizontalSection) {
+      horizontalSection.addEventListener('mouseenter', () => document.body.classList.add('cursor-drag'));
+      horizontalSection.addEventListener('mouseleave', () => document.body.classList.remove('cursor-drag'));
+    }
+
+    const magneticButtons = document.querySelectorAll('.magnetic-btn, .footer-magnetic-cta');
+    magneticButtons.forEach((btn) => {
+      btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const deltaX = e.clientX - (rect.left + rect.width / 2);
+        const deltaY = e.clientY - (rect.top + rect.height / 2);
+        gsap.to(btn, {
+          x: deltaX * 0.35,
+          y: deltaY * 0.35,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, {
+          x: 0,
+          y: 0,
+          duration: 0.7,
+          ease: 'elastic.out(1, 0.3)'
+        });
+      });
+    });
+
+    /* ==========================================================================
+       3. SITE HEADER SCROLL TRIGGER (COLLAPSIBLE ANNOUNCEMENT BAR)
+       ========================================================================== */
+    const siteHeaderGroup = document.getElementById('site-header-group');
+    ScrollTrigger.create({
+      start: 'top -30',
+      onUpdate: (self) => {
+        if (self.scroll() > 40) {
+          siteHeaderGroup.classList.add('scrolled');
+        } else {
+          siteHeaderGroup.classList.remove('scrolled');
+        }
+      }
+    });
+
+    /* ==========================================================================
+       4. HERO VIDEO CONTROLLER (PAUSE/PLAY & MUTE/SOUND)
+       ========================================================================== */
+    const bgVideo = document.getElementById('hero-bg-video');
+    const videoPlayToggle = document.getElementById('video-play-toggle');
+    const videoPlayText = document.getElementById('video-play-text');
+    const videoPlayIcon = videoPlayToggle ? videoPlayToggle.querySelector('i') : null;
+
+    const videoSoundToggle = document.getElementById('video-sound-toggle');
+    const videoSoundText = document.getElementById('video-sound-text');
+    const videoSoundIcon = videoSoundToggle ? videoSoundToggle.querySelector('i') : null;
+
+    if (bgVideo && videoPlayToggle) {
+      videoPlayToggle.addEventListener('click', () => {
+        if (bgVideo.paused) {
+          bgVideo.play();
+          if (videoPlayText) videoPlayText.textContent = 'Pause';
+          if (videoPlayIcon) videoPlayIcon.className = 'fa-solid fa-pause';
+        } else {
+          bgVideo.pause();
+          if (videoPlayText) videoPlayText.textContent = 'Play';
+          if (videoPlayIcon) videoPlayIcon.className = 'fa-solid fa-play';
+        }
+      });
+    }
+
+    if (bgVideo && videoSoundToggle) {
+      videoSoundToggle.addEventListener('click', () => {
+        if (bgVideo.muted) {
+          bgVideo.muted = false;
+          if (videoSoundText) videoSoundText.textContent = 'Sound On';
+          if (videoSoundIcon) videoSoundIcon.className = 'fa-solid fa-volume-high';
+        } else {
+          bgVideo.muted = true;
+          if (videoSoundText) videoSoundText.textContent = 'Mute';
+          if (videoSoundIcon) videoSoundIcon.className = 'fa-solid fa-volume-xmark';
+        }
+      });
+    }
+
+    /* ==========================================================================
+       5. SECTION A: HERO KINETIC TIMELINE & SMOOTH SCROLL CHOREOGRAPHY
+       ========================================================================== */
+    let horizontalScrollTriggerInstance = null;
+
+    const ctx = gsap.context(() => {
+      
+      // Cinematic entrance — brand first, then line, CTA
+      gsap.from('.hero-brand-mark', {
+        y: 40,
+        opacity: 0,
+        duration: 1.2,
+        ease: 'power4.out',
+        delay: 0.2
+      });
+
+      gsap.from('.hero-headline', {
+        y: 28,
+        opacity: 0,
+        duration: 1.1,
+        ease: 'power3.out',
+        delay: 0.4
+      });
+
+      gsap.from('.hero-subhead', {
+        y: 22,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        delay: 0.55
+      });
+
+      gsap.from('.hero-cta-group', {
+        y: 20,
+        opacity: 0,
+        duration: 0.9,
+        ease: 'power3.out',
+        delay: 0.7
+      });
+
+      gsap.from('.hero-video-controls, #scroll-hud', {
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 1
+      });
+
+      gsap.from('.concierge-inner > *', {
+        y: 36,
+        opacity: 0,
+        stagger: 0.12,
+        duration: 0.9,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: '#concierge',
+          start: 'top 85%',
+          once: true
+        }
+      });
+
+      /* Section bridge parallax + scroll-in reveals (skipped when reduced motion) */
+      const mmReveal = gsap.matchMedia();
+      mmReveal.add('(prefers-reduced-motion: no-preference)', () => {
+        const bridge = document.querySelector('#section-bridge');
+        if (bridge) {
+          const bg = bridge.querySelector('[data-parallax-bg]');
+          const fg = bridge.querySelector('[data-parallax-fg]');
+          const line = bridge.querySelector('.section-bridge-line');
+
+          gsap.fromTo(bg,
+            { yPercent: -14 },
+            {
+              yPercent: 14,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: bridge,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+              }
+            }
+          );
+
+          gsap.fromTo(fg,
+            { y: 72, opacity: 0.35 },
+            {
+              y: -48,
+              opacity: 1,
+              ease: 'none',
+              scrollTrigger: {
+                trigger: bridge,
+                start: 'top 85%',
+                end: 'center 35%',
+                scrub: true
+              }
+            }
+          );
+
+          if (line) {
+            gsap.fromTo(line,
+              { scaleX: 0, opacity: 0 },
+              {
+                scaleX: 1,
+                opacity: 1,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: bridge,
+                  start: 'top 70%',
+                  end: 'center 40%',
+                  scrub: true
+                }
+              }
+            );
+          }
+        }
+
+        const reveal = (targets, opts = {}) => {
+          const els = gsap.utils.toArray(targets);
+          if (!els.length) return;
+          const { trigger, y = 48, stagger = 0.1, duration = 0.85, scale } = opts;
+          gsap.from(els, {
+            y,
+            opacity: 0,
+            ...(scale != null ? { scale } : {}),
+            duration,
+            ease: 'power3.out',
+            stagger,
+            scrollTrigger: {
+              trigger: trigger || els[0],
+              start: 'top 88%',
+              once: true
+            }
+          });
+        };
+
+        reveal('.about-text-col > *', { trigger: '#about-us', y: 36, stagger: 0.08 });
+        reveal('.about-media-col', { trigger: '#about-us', y: 56, duration: 1 });
+        reveal('.territory-card', { trigger: '.manifesto-territories-grid', y: 56, stagger: 0.14 });
+        reveal('.manifesto-credo-bar', { trigger: '.manifesto-credo-bar', y: 28 });
+        reveal('.horizontal-hud > *', { trigger: '#expeditions-track', y: 24, stagger: 0.1 });
+        reveal('.metric-card', { trigger: '.metrics-grid', y: 40, stagger: 0.1 });
+        reveal('#video-stories .section-header-center > *', { trigger: '#video-stories', y: 28, stagger: 0.08 });
+        reveal('.video-story-card', { trigger: '.video-stories-grid', y: 48, stagger: 0.12 });
+        reveal('#customer-gallery .section-header-center > *', { trigger: '#customer-gallery', y: 28, stagger: 0.08 });
+        reveal('.gallery-item', { trigger: '.gallery-mosaic-grid', y: 36, scale: 0.97, stagger: 0.06, duration: 0.75 });
+        reveal('.footer-cta-card > *', { trigger: '.footer-cta-card', y: 32, stagger: 0.1 });
+        reveal('.footer-grid-4col > *', { trigger: '.footer-grid-4col', y: 28, stagger: 0.08 });
+      });
+
+      mmReveal.add('(prefers-reduced-motion: no-preference) and (max-width: 768px)', () => {
+        const cards = gsap.utils.toArray('.expedition-card');
+        if (!cards.length) return;
+        gsap.from(cards, {
+          y: 40,
+          opacity: 0,
+          duration: 0.85,
+          ease: 'power3.out',
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: '#expeditions-track',
+            start: 'top 85%',
+            once: true
+          }
+        });
+      });
+
+      const mm = gsap.matchMedia();
+
+      mm.add("(min-width: 769px)", () => {
+        const heroTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: '#hero-scrub-section',
+            start: 'top top',
+            end: '+=75%',
+            pin: true,
+            scrub: 0.4,
+            anticipatePin: 1
+          }
+        });
+
+        heroTimeline
+          .to('#hero-content-layer', {
+            y: -100,
+            scale: 0.94,
+            opacity: 0,
+            ease: 'power2.inOut'
+          }, 0)
+          .to('#hero-bg-video', {
+            scale: 1.18,
+            ease: 'none'
+          }, 0)
+          .to('#scroll-hud', {
+            opacity: 0,
+            duration: 0.15
+          }, 0)
+          .to('#hero-video-controls', {
+            opacity: 0,
+            duration: 0.15
+          }, 0);
+      });
+
+      mm.add("(max-width: 768px)", () => {
+        gsap.to('#hero-content-layer', {
+          y: -60,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: '#hero-scrub-section',
+            start: 'top top',
+            end: 'bottom 40%',
+            scrub: true
+          }
+        });
+
+        // Native horizontal swipe for curated packages on mobile
+        const mobileTrack = document.getElementById('horizontal-track');
+        const mobileCards = gsap.utils.toArray('.expedition-card');
+        const hudCounter = document.getElementById('hud-current-index');
+        const hudBar = document.getElementById('hud-progress-bar');
+
+        const updateMobileHud = () => {
+          if (!mobileTrack || !mobileCards.length) return;
+          const maxScroll = mobileTrack.scrollWidth - mobileTrack.clientWidth;
+          const progress = maxScroll > 0 ? mobileTrack.scrollLeft / maxScroll : 0;
+          let activeIndex = 0;
+          let closest = Infinity;
+          mobileCards.forEach((card, i) => {
+            const dist = Math.abs(card.offsetLeft - mobileTrack.scrollLeft - 16);
+            if (dist < closest) {
+              closest = dist;
+              activeIndex = i;
+            }
+          });
+          if (hudCounter) hudCounter.textContent = String(activeIndex + 1).padStart(2, '0');
+          if (hudBar) hudBar.style.transform = `scaleX(${Math.max(0.08, progress)})`;
+        };
+
+        if (mobileTrack) {
+          mobileTrack.addEventListener('scroll', updateMobileHud, { passive: true });
+          updateMobileHud();
+        }
+      });
+
+      /* ==========================================================================
+         6. SECTION C: FEATURES SHOWCASE — HORIZONTAL SCROLL HIJACK & PARALLAX
+         ========================================================================== */
+      mm.add("(min-width: 769px)", () => {
+        const horizontalTrack = document.getElementById('horizontal-track');
+        const cards = gsap.utils.toArray('.expedition-card');
+        const totalCards = cards.length;
+        
+        const getScrollDistance = () => horizontalTrack.scrollWidth - window.innerWidth;
+
+        const horizontalTween = gsap.to(horizontalTrack, {
+          x: () => -getScrollDistance(),
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#expeditions-track",
+            start: "top top",
+            end: () => `+=${getScrollDistance()}`,
+            pin: true,
+            scrub: 0.8,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+            onRefresh: (self) => {
+              horizontalScrollTriggerInstance = self;
+            },
+            onUpdate: (self) => {
+              const progress = self.progress;
+              const cardIndex = Math.min(totalCards - 1, Math.floor(progress * totalCards));
+              const hudCounter = document.getElementById('hud-current-index');
+              const hudBar = document.getElementById('hud-progress-bar');
+              
+              if (hudCounter) hudCounter.textContent = `0${cardIndex + 1}`;
+              if (hudBar) hudBar.style.transform = `scaleX(${progress})`;
+
+              const navPills = document.querySelectorAll('.nav-destination-pills .nav-pill');
+              navPills.forEach((p, idx) => {
+                if (idx === Math.min(navPills.length - 1, cardIndex)) p.classList.add('active');
+                else p.classList.remove('active');
+              });
+            }
+          }
+        });
+
+        horizontalScrollTriggerInstance = horizontalTween.scrollTrigger;
+
+        cards.forEach((card) => {
+          const innerImg = card.querySelector('.card-parallax-img');
+          if (innerImg) {
+            gsap.fromTo(innerImg, 
+              { xPercent: 12 },
+              {
+                xPercent: -12,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: "#expeditions-track",
+                  start: "top top",
+                  end: () => `+=${getScrollDistance()}`,
+                  scrub: 0.8,
+                }
+              }
+            );
+          }
+        });
+      });
+
+      /* ==========================================================================
+         7. SECTION D: TEXT STRIP + NUMBER TICKERS
+         ========================================================================== */
+      const marqueeContainer = document.getElementById('marquee-container');
+      const marqueeRow1 = document.getElementById('marquee-row-1');
+      const marqueeRow2 = document.getElementById('marquee-row-2');
+      const reduceMotionStrip = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (marqueeContainer && marqueeRow1 && marqueeRow2 && !reduceMotionStrip) {
+        gsap.from(marqueeContainer, {
+          opacity: 0,
+          y: 28,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: marqueeContainer,
+            start: 'top 90%',
+            once: true
+          }
+        });
+
+        /* Pixel transform loop — constant + light scroll boost (no CSS animation) */
+        let x1 = 0;
+        let x2 = 0;
+        let stripVel = 0;
+        let loop1 = 0;
+        let loop2 = 0;
+        let row2Seeded = false;
+
+        const measureLoops = () => {
+          const next1 = marqueeRow1.scrollWidth / 2;
+          const next2 = marqueeRow2.scrollWidth / 2;
+          if (next1 > 0) loop1 = next1;
+          if (next2 > 0) {
+            if (!row2Seeded) {
+              x2 = -next2;
+              row2Seeded = true;
+            } else if (loop2 > 0 && next2 !== loop2) {
+              /* Keep phase when font metrics settle */
+              x2 = (x2 / loop2) * next2;
+              x1 = (x1 / (loop1 || next1)) * next1;
+            }
+            loop2 = next2;
+          }
+        };
+        measureLoops();
+        if (document.fonts?.ready) document.fonts.ready.then(measureLoops);
+        window.addEventListener('resize', measureLoops, { passive: true });
+
+        lenis.on('scroll', ({ velocity }) => {
+          stripVel += (velocity - stripVel) * 0.12;
+        });
+
+        gsap.ticker.add(() => {
+          if (!loop1 || !loop2) {
+            measureLoops();
+            return;
+          }
+          stripVel *= 0.88;
+
+          const boost = Math.min(1.2, Math.abs(stripVel) * 0.28);
+          x1 -= 0.5 + boost * 0.7;
+          x2 += 0.42 + boost * 0.55;
+
+          while (x1 <= -loop1) x1 += loop1;
+          while (x2 >= 0) x2 -= loop2;
+
+          marqueeRow1.style.transform = `translate3d(${x1}px, 0, 0)`;
+          marqueeRow2.style.transform = `translate3d(${x2}px, 0, 0)`;
+        });
+      }
+
+      ScrollTrigger.create({
+        trigger: '.metrics-grid',
+        start: 'top 80%',
+        once: true,
+        onEnter: () => {
+          const odometers = document.querySelectorAll('.metric-odometer');
+          odometers.forEach((counter) => {
+            const targetVal = parseFloat(counter.getAttribute('data-target')) || 0;
+            const prefix = counter.getAttribute('data-prefix') || '';
+            const suffix = counter.getAttribute('data-suffix') || '';
+            const decimals = parseInt(counter.getAttribute('data-decimals') || '0');
+
+            const valObj = { current: 0 };
+            gsap.to(valObj, {
+              current: targetVal,
+              duration: 2.4,
+              ease: 'power4.out',
+              onUpdate: () => {
+                counter.textContent = `${prefix}${valObj.current.toLocaleString('en-IN', {
+                  minimumFractionDigits: decimals,
+                  maximumFractionDigits: decimals
+                })}${suffix}`;
+              }
+            });
+          });
+        }
+      });
+
+    }); // End of gsap.context
+
+    /* ==========================================================================
+       8. SMOOTH DESTINATION NAVIGATION ROUTER & BACK TO TOP
+       ========================================================================== */
+    document.querySelectorAll('.nav-destination-pills a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').replace('#', '');
+        
+        if (targetId === 'about-us' || targetId === 'video-stories' || targetId === 'customer-gallery') {
+          const targetSection = document.getElementById(targetId);
+          if (targetSection) lenis.scrollTo(targetSection, { duration: 1.2 });
+          return;
+        }
+
+        const targetCard = document.getElementById(targetId);
+        const horizontalTrack = document.getElementById('horizontal-track');
+
+        if (targetCard && horizontalTrack && horizontalScrollTriggerInstance) {
+          const cardLeft = targetCard.offsetLeft - 60;
+          const totalDist = horizontalTrack.scrollWidth - window.innerWidth;
+          const progress = Math.max(0, Math.min(1, cardLeft / totalDist));
+          const targetScroll = horizontalScrollTriggerInstance.start + (horizontalScrollTriggerInstance.end - horizontalScrollTriggerInstance.start) * progress;
+          
+          lenis.scrollTo(targetScroll, { duration: 1.4 });
+        } else if (targetCard) {
+          lenis.scrollTo(targetCard, { duration: 1.2 });
+        }
+      });
+    });
+
+    const backToTopBtn = document.getElementById('back-to-top-btn');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => {
+        lenis.scrollTo(0, { duration: 1.2 });
+      });
+    }
+
+    /* ==========================================================================
+       9. EXPEDITION INQUIRY MODAL LOGIC (<dialog>)
+       ========================================================================== */
+    const inquiryDialog = document.getElementById('inquiry-dialog');
+    const openInquiryNavBtn = document.getElementById('open-inquiry-nav-btn');
+    const heroExploreBtn = document.getElementById('hero-explore-btn');
+    const footerInquireBtn = document.getElementById('footer-inquire-btn');
+    const modalCloseXBtn = document.getElementById('modal-close-x-btn');
+    const inquiryForm = document.getElementById('expedition-inquiry-form');
+    const destChips = document.querySelectorAll('.dest-chip-btn');
+    const selectedDestInput = document.getElementById('selected-dest-input');
+
+    function openModalWithDestination(destName) {
+      if (destName) {
+        destChips.forEach(chip => {
+          if (chip.getAttribute('data-value').toLowerCase() === destName.toLowerCase()) {
+            chip.classList.add('selected');
+            selectedDestInput.value = chip.getAttribute('data-value');
+          } else {
+            chip.classList.remove('selected');
+          }
+        });
+      }
+      inquiryDialog.showModal();
+    }
+
+    if (openInquiryNavBtn) openInquiryNavBtn.addEventListener('click', () => openModalWithDestination());
+
+    // Hero CTA — open quote modal
+    const heroPlanTripBtn = document.getElementById('hero-plan-trip-btn');
+    if (heroPlanTripBtn) {
+      heroPlanTripBtn.addEventListener('click', () => openModalWithDestination('Andaman'));
+    }
+
+    // Concierge planner dock
+    const conciergePlanBtn = document.getElementById('concierge-plan-btn');
+    if (conciergePlanBtn) {
+      conciergePlanBtn.addEventListener('click', () => {
+        const destSelect = document.getElementById('planner-destination-select');
+        const selectedDest = destSelect ? destSelect.value : 'Andaman';
+        openModalWithDestination(selectedDest);
+      });
+    }
+
+    // Quick Destination Chips smooth scroll via Lenis
+    document.querySelectorAll('.quick-dest-chip').forEach(chip => {
+      chip.addEventListener('click', (e) => {
+        const targetId = chip.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetEl = document.querySelector(targetId);
+          if (targetEl && window.lenis) {
+            window.lenis.scrollTo(targetEl, { offset: -90, duration: 1.3 });
+          }
+        }
+      });
+    });
+    if (heroExploreBtn) {
+      heroExploreBtn.addEventListener('click', () => {
+        const expeditions = document.getElementById('expeditions-track');
+        if (expeditions) lenis.scrollTo(expeditions, { duration: 1.4 });
+      });
+    }
+    if (footerInquireBtn) footerInquireBtn.addEventListener('click', () => openModalWithDestination());
+    if (modalCloseXBtn) modalCloseXBtn.addEventListener('click', () => inquiryDialog.close());
+
+    document.querySelectorAll('.card-inquire-btn').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dest = btn.getAttribute('data-destination') || 'Andaman';
+        openModalWithDestination(dest);
+      });
+    });
+
+    destChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        destChips.forEach(c => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        selectedDestInput.value = chip.getAttribute('data-value');
+      });
+    });
+
+    inquiryDialog.addEventListener('click', (e) => {
+      const rect = inquiryDialog.getBoundingClientRect();
+      if (
+        e.clientX < rect.left ||
+        e.clientX > rect.right ||
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom
+      ) {
+        inquiryDialog.close();
+      }
+    });
+
+    inquiryForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const dest = selectedDestInput.value;
+      const name = document.getElementById('inquirer-name').value;
+      const phone = document.getElementById('inquirer-phone').value;
+      const email = document.getElementById('inquirer-email') ? document.getElementById('inquirer-email').value : '';
+      const travelers = document.getElementById('inquirer-travelers').value;
+
+      const message = `Hello My Tour Guru Holiday Pvt Ltd!%0A%0AI would like to get a quote:%0A• Destination: ${encodeURIComponent(dest)}%0A• Name: ${encodeURIComponent(name)}%0A• Phone: ${encodeURIComponent(phone)}%0A• Email: ${encodeURIComponent(email)}%0A• Details: ${encodeURIComponent(travelers)}%0A%0APlease send the best deals!`;
+      
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=917063911703&text=${message}`;
+      
+      inquiryDialog.close();
+      window.open(whatsappUrl, '_blank');
+    });
+
+    window.addEventListener('load', () => {
+      ScrollTrigger.refresh();
+    });
+
+    /* ==========================================================================
+       10. THEME TOGGLE CONTROLLER (LIGHT/DARK ARCHITECTURE)
+       ========================================================================== */
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        if (themeIcon) {
+          themeIcon.className = 'fa-solid fa-sun';
+        }
+      } else {
+        document.body.removeAttribute('data-theme');
+        if (themeIcon) {
+          themeIcon.className = 'fa-solid fa-moon';
+        }
+      }
+      localStorage.setItem('mytourguru-theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('mytourguru-theme') || 'light';
+    applyTheme(savedTheme);
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        applyTheme(isDark ? 'light' : 'dark');
+      });
+    }
+
+    window.addEventListener('beforeunload', () => {
+      ctx.revert();
+      lenis.destroy();
+    });
+  </script>
+</body>
+</html>
