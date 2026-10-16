@@ -126,19 +126,35 @@
     }
 
     /* Custom Kinetic Cursor */
+    @media (pointer: fine) {
+      body.has-custom-cursor,
+      body.has-custom-cursor * {
+        cursor: none !important;
+      }
+
+      body.has-custom-cursor input,
+      body.has-custom-cursor textarea,
+      body.has-custom-cursor select,
+      body.has-custom-cursor [contenteditable="true"] {
+        cursor: text !important;
+      }
+    }
+
     .custom-cursor-dot {
       position: fixed;
       top: 0;
       left: 0;
       width: 6px;
       height: 6px;
+      margin: 0;
       background-color: var(--accent-gold);
       border-radius: 50%;
       pointer-events: none;
       z-index: 10000;
-      transform: translate(-50%, -50%);
+      transform: translate3d(-50%, -50%, 0);
       opacity: 0;
       transition: opacity 0.3s ease;
+      will-change: transform;
     }
 
     .custom-cursor-follower {
@@ -147,16 +163,18 @@
       left: 0;
       width: 40px;
       height: 40px;
-      border: 1px solid rgba(27, 107, 99, 0.4);
+      margin: 0;
+      border: 1.5px solid rgba(27, 107, 99, 0.45);
       background: transparent;
       border-radius: 50%;
       pointer-events: none;
       z-index: 9999;
-      transform: translate(-50%, -50%);
+      transform: translate3d(-50%, -50%, 0);
       display: flex;
       align-items: center;
       justify-content: center;
       opacity: 0;
+      will-change: transform;
       transition: opacity 0.3s ease,
                   width 0.35s var(--ease-elastic), 
                   height 0.35s var(--ease-elastic), 
@@ -497,7 +515,8 @@
       height: 100%;
       object-fit: cover;
       object-position: center center;
-      transform: scale(1.08);
+      transform: scale(1.06);
+      transform-origin: center center;
       filter: brightness(0.78) contrast(1.06) saturate(1.04);
       will-change: transform, filter;
     }
@@ -518,6 +537,7 @@
         radial-gradient(ellipse at 50% 55%, transparent 0%, rgba(14, 23, 20, 0.28) 100%);
       z-index: 2;
       pointer-events: none;
+      will-change: opacity;
     }
 
     [data-theme="dark"] .hero-video-overlay {
@@ -5410,39 +5430,76 @@
        ========================================================================== */
     const cursorDot = document.getElementById('cursor-dot');
     const cursorFollower = document.getElementById('cursor-follower');
+    const finePointer = window.matchMedia('(pointer: fine)').matches;
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
     let followerX = mouseX;
     let followerY = mouseY;
     let cursorRevealed = false;
 
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      if (!cursorRevealed) {
-        cursorRevealed = true;
+    if (finePointer && cursorDot && cursorFollower) {
+      document.body.classList.add('has-custom-cursor');
+
+      const placeDot = (x, y) => {
+        cursorDot.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+      };
+      const placeFollower = (x, y) => {
+        cursorFollower.style.transform = `translate3d(${x}px, ${y}px, 0) translate(-50%, -50%)`;
+      };
+
+      placeDot(mouseX, mouseY);
+      placeFollower(followerX, followerY);
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        placeDot(mouseX, mouseY);
+        if (!cursorRevealed) {
+          cursorRevealed = true;
+          cursorDot.style.opacity = '1';
+          cursorFollower.style.opacity = '1';
+        }
+      }, { passive: true });
+
+      window.addEventListener('mouseleave', () => {
+        cursorDot.style.opacity = '0';
+        cursorFollower.style.opacity = '0';
+        cursorRevealed = false;
+      });
+
+      window.addEventListener('mouseenter', () => {
         cursorDot.style.opacity = '1';
         cursorFollower.style.opacity = '1';
+        cursorRevealed = true;
+      });
+
+      gsap.ticker.add(() => {
+        followerX += (mouseX - followerX) * 0.18;
+        followerY += (mouseY - followerY) * 0.18;
+        placeFollower(followerX, followerY);
+      });
+
+      const interactiveElements = document.querySelectorAll(
+        'button, a, input, textarea, select, .expedition-card, .dest-chip-btn, .video-story-card, .gallery-item, .video-ctrl-btn, .footer-social-btn, .how-work-pill, .promise-stack-card'
+      );
+      interactiveElements.forEach((el) => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+      });
+
+      const horizontalSection = document.getElementById('expeditions-track');
+      if (horizontalSection) {
+        horizontalSection.addEventListener('mouseenter', () => {
+          document.body.classList.add('cursor-drag');
+          document.body.classList.remove('cursor-hover');
+        });
+        horizontalSection.addEventListener('mouseleave', () => {
+          document.body.classList.remove('cursor-drag');
+        });
       }
-      cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-    }, { passive: true });
-
-    gsap.ticker.add(() => {
-      followerX += (mouseX - followerX) * 0.16;
-      followerY += (mouseY - followerY) * 0.16;
-      cursorFollower.style.transform = `translate(${followerX}px, ${followerY}px)`;
-    });
-
-    const interactiveElements = document.querySelectorAll('button, a, input, .expedition-card, .dest-chip-btn, .video-story-card, .gallery-item, .video-ctrl-btn, .footer-social-btn');
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-    });
-
-    const horizontalSection = document.getElementById('expeditions-track');
-    if (horizontalSection) {
-      horizontalSection.addEventListener('mouseenter', () => document.body.classList.add('cursor-drag'));
-      horizontalSection.addEventListener('mouseleave', () => document.body.classList.remove('cursor-drag'));
+    } else if (cursorDot && cursorFollower) {
+      cursorDot.style.display = 'none';
+      cursorFollower.style.display = 'none';
     }
 
     const magneticButtons = document.querySelectorAll('.magnetic-btn, .footer-magnetic-cta');
@@ -5530,10 +5587,19 @@
     let horizontalScrollTriggerInstance = null;
 
     const ctx = gsap.context(() => {
-      /* Kill any leftover GSAP transforms that broke video centering */
-      gsap.set('#hero-bg-video', { clearProps: 'transform,x,y,xPercent,yPercent,scale,rotation' });
-      gsap.set('#hero-video-container', { clearProps: 'transform,x,y,xPercent,yPercent,scale' });
-      
+      /* Keep video cover-centering intact; zoom only via scale from center */
+      gsap.set('#hero-bg-video', {
+        clearProps: 'x,y,xPercent,yPercent,rotation',
+        scale: 1.06,
+        transformOrigin: '50% 50%'
+      });
+      gsap.set('#hero-video-container', {
+        clearProps: 'x,y,xPercent,yPercent',
+        scale: 1,
+        yPercent: 0,
+        transformOrigin: '50% 50%'
+      });
+
       // Cinematic entrance — brand first, then line, CTA
       gsap.from('.hero-brand-mark', {
         y: 40,
@@ -6045,55 +6111,73 @@
 
       const mm = gsap.matchMedia();
 
-      mm.add("(min-width: 769px)", () => {
+      mm.add("(min-width: 769px) and (prefers-reduced-motion: no-preference)", () => {
         if (floatRail) gsap.set(floatRail, { clearProps: 'opacity,x,y' });
 
         const heroTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '#hero-scrub-section',
             start: 'top top',
-            end: '+=75%',
+            end: '+=120%',
             pin: true,
-            scrub: 0.4,
-            anticipatePin: 1
+            scrub: 0.65,
+            anticipatePin: 1,
+            invalidateOnRefresh: true
           }
         });
 
-        /* Parallax the container — never overwrite video object-fit centering */
+        /* Cinematic scroll zoom — video pushes in; copy lifts away */
         heroTimeline
-          .fromTo('#hero-content-layer',
-            { y: 0, scale: 1, opacity: 1 },
-            { y: -100, scale: 0.94, opacity: 0, ease: 'power2.inOut' },
+          .fromTo('#hero-bg-video',
+            { scale: 1.06, filter: 'brightness(0.78) contrast(1.06) saturate(1.04)' },
+            { scale: 1.42, filter: 'brightness(0.52) contrast(1.12) saturate(1.08)', ease: 'none' },
             0)
           .fromTo('#hero-video-container',
             { scale: 1, yPercent: 0 },
-            { scale: 1.12, yPercent: 6, ease: 'none' },
+            { scale: 1.08, yPercent: 4, ease: 'none' },
+            0)
+          .fromTo('.hero-video-overlay',
+            { opacity: 1 },
+            { opacity: 0.55, ease: 'none' },
+            0)
+          .fromTo('#hero-content-layer',
+            { y: 0, scale: 1, opacity: 1, filter: 'blur(0px)' },
+            { y: -140, scale: 0.88, opacity: 0, filter: 'blur(8px)', ease: 'power2.in' },
             0)
           .fromTo('#hero-float-rail',
-            { y: 0, x: 0, opacity: 1 },
-            { y: -80, x: 40, opacity: 0, ease: 'power2.in' },
+            { y: 0, x: 0, opacity: 1, scale: 1 },
+            { y: -110, x: 56, opacity: 0, scale: 0.92, ease: 'power2.in' },
             0)
           .to('#scroll-hud', {
             opacity: 0,
-            duration: 0.15
+            duration: 0.2
           }, 0)
           .to('#hero-video-controls', {
             opacity: 0,
-            duration: 0.15
+            y: 24,
+            duration: 0.25
           }, 0);
       });
 
-      mm.add("(max-width: 768px)", () => {
-        gsap.to('#hero-content-layer', {
-          y: -60,
-          opacity: 0,
+      mm.add("(max-width: 768px) and (prefers-reduced-motion: no-preference)", () => {
+        gsap.timeline({
           scrollTrigger: {
             trigger: '#hero-scrub-section',
             start: 'top top',
-            end: 'bottom 40%',
-            scrub: true
+            end: 'bottom top',
+            scrub: 0.5
           }
-        });
+        })
+          .fromTo('#hero-bg-video',
+            { scale: 1.06 },
+            { scale: 1.28, ease: 'none' },
+            0)
+          .to('#hero-content-layer', {
+            y: -80,
+            opacity: 0,
+            scale: 0.94,
+            ease: 'power1.in'
+          }, 0);
 
         // Native horizontal swipe for curated packages on mobile
         const mobileTrack = document.getElementById('horizontal-track');
