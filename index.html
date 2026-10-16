@@ -480,26 +480,25 @@
     /* Full-Bleed Background Video Container */
     .hero-video-container {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       overflow: hidden;
       z-index: 1;
       will-change: transform;
+      transform-origin: center center;
+      background: #0c1210;
     }
 
     .hero-bg-video {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%) scale(1.08);
+      inset: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      filter: brightness(0.72) contrast(1.08) saturate(1.05);
+      object-position: center center;
+      transform: scale(1.08);
+      filter: brightness(0.78) contrast(1.06) saturate(1.04);
       will-change: transform, filter;
     }
 
@@ -515,16 +514,16 @@
       width: 100%;
       height: 100%;
       background:
-        linear-gradient(180deg, rgba(14, 23, 20, 0.55) 0%, rgba(14, 23, 20, 0.2) 38%, rgba(14, 23, 20, 0.72) 100%),
-        radial-gradient(ellipse at 50% 70%, transparent 0%, rgba(14, 23, 20, 0.35) 100%);
+        linear-gradient(180deg, rgba(14, 23, 20, 0.42) 0%, rgba(14, 23, 20, 0.18) 42%, rgba(14, 23, 20, 0.62) 100%),
+        radial-gradient(ellipse at 50% 55%, transparent 0%, rgba(14, 23, 20, 0.28) 100%);
       z-index: 2;
       pointer-events: none;
     }
 
     [data-theme="dark"] .hero-video-overlay {
       background:
-        linear-gradient(180deg, rgba(10, 16, 14, 0.65) 0%, rgba(10, 16, 14, 0.25) 40%, rgba(10, 16, 14, 0.85) 100%),
-        radial-gradient(ellipse at 50% 70%, transparent 0%, rgba(10, 16, 14, 0.4) 100%);
+        linear-gradient(180deg, rgba(10, 16, 14, 0.5) 0%, rgba(10, 16, 14, 0.22) 42%, rgba(10, 16, 14, 0.72) 100%),
+        radial-gradient(ellipse at 50% 55%, transparent 0%, rgba(10, 16, 14, 0.32) 100%);
     }
 
     .hero-video-controls {
@@ -571,7 +570,7 @@
       pointer-events: auto;
       will-change: transform, opacity;
       transform-origin: center center;
-      margin-top: 4vh;
+      margin-top: -6vh;
     }
 
     .hero-brand-mark {
@@ -958,22 +957,629 @@
     }
 
     /* ==========================================================================
+       TRAVELO MOTION LAYER — HERO FLOAT / MEGATYPE / PEEK / PHOTO TICKER
+       ========================================================================== */
+    .hero-float-rail {
+      position: absolute;
+      right: clamp(16px, 3vw, 48px);
+      bottom: clamp(72px, 12vh, 120px);
+      z-index: 18;
+      width: min(280px, 32vw);
+      height: 210px;
+      pointer-events: none;
+    }
+
+    .hero-float-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(250, 251, 250, 0.96);
+      box-shadow: 0 24px 48px -20px rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      transform: translateX(36px) scale(0.92);
+      transition: opacity 0.55s var(--ease-elastic), transform 0.55s var(--ease-elastic);
+      pointer-events: none;
+    }
+
+    .hero-float-card.is-active {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .hero-float-card.is-exit {
+      opacity: 0;
+      transform: translateX(-28px) scale(0.94);
+    }
+
+    .hero-float-card img {
+      width: 100%;
+      height: 58%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-float-meta {
+      padding: 12px 14px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-float-meta strong {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0E1714;
+    }
+
+    .hero-float-meta span {
+      font-size: 0.72rem;
+      color: #5a6661;
+    }
+
+    .hero-float-rating {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(14, 23, 20, 0.72);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 5px 9px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-float-rating i {
+      color: #c4a06a;
+      font-size: 0.65rem;
+    }
+
+    .brand-megatype {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: transparent;
+      color: #f4f0e8;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .brand-megatype-track {
+      display: inline-flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0.06em;
+      margin: 0 auto;
+      width: max-content;
+      max-width: 100%;
+      will-change: transform, opacity;
+      white-space: nowrap;
+      transform-origin: 50% 50%;
+    }
+
+    .brand-megatype-word {
+      font-family: var(--font-body);
+      font-size: clamp(2.6rem, 12.5vw, 9.5rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 0.88;
+      text-transform: uppercase;
+      background-image: url('https://www.mytourguru.com/images/page1.webp');
+      background-size: 140% auto;
+      background-position: center 35%;
+      background-repeat: no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.92);
+      paint-order: stroke fill;
+      will-change: background-position, transform;
+    }
+
+    .brand-megatype-mark {
+      font-size: clamp(0.7rem, 1.4vw, 1.1rem);
+      font-weight: 700;
+      border: 1.5px solid rgba(244, 240, 232, 0.55);
+      border-radius: 4px;
+      padding: 0.15em 0.28em;
+      margin-top: 0.35em;
+      opacity: 0.7;
+      color: #f4f0e8;
+      -webkit-text-fill-color: #f4f0e8;
+    }
+
+    #about-scrub-text .scrub-word {
+      color: rgba(14, 23, 20, 0.22);
+      transition: color 0.05s linear;
+    }
+
+    [data-theme="dark"] #about-scrub-text .scrub-word {
+      color: rgba(244, 240, 232, 0.22);
+    }
+
+    #about-scrub-text .scrub-word.is-lit {
+      color: var(--text-primary);
+    }
+
+    #about-scrub-text .scrub-word.is-lit.highlight-cyan,
+    #about-scrub-text .highlight-cyan.scrub-word.is-lit {
+      color: var(--accent-cyan);
+    }
+
+    .expedition-card.is-center-focus {
+      transform: translateY(-6px) scale(1.035);
+      border-color: var(--border-active);
+      box-shadow: var(--card-shadow-hover);
+      z-index: 2;
+    }
+
+    .video-stories-peek {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 8px 40px 12px;
+      overflow: visible;
+    }
+
+    .video-stories-peek .video-stories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      width: 100%;
+      transform: none !important;
+    }
+
+    .video-stories-peek .video-story-card {
+      width: 100%;
+      max-width: none;
+      min-width: 0;
+    }
+
+    .photo-ticker {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 28px 0 8px;
+      background: var(--bg-dark);
+    }
+
+    .photo-ticker::before,
+    .photo-ticker::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: clamp(56px, 12vw, 140px);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .photo-ticker::before {
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        var(--bg-dark) 0%,
+        color-mix(in srgb, var(--bg-dark) 55%, transparent) 42%,
+        transparent 100%
+      );
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 35%, transparent 100%);
+      mask-image: linear-gradient(90deg, #000 0%, #000 35%, transparent 100%);
+    }
+
+    .photo-ticker::after {
+      right: 0;
+      background: linear-gradient(
+        270deg,
+        var(--bg-dark) 0%,
+        color-mix(in srgb, var(--bg-dark) 55%, transparent) 42%,
+        transparent 100%
+      );
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      -webkit-mask-image: linear-gradient(270deg, #000 0%, #000 35%, transparent 100%);
+      mask-image: linear-gradient(270deg, #000 0%, #000 35%, transparent 100%);
+    }
+
+    .photo-ticker-row {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .photo-ticker-track {
+      display: flex;
+      gap: 16px;
+      padding-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .photo-ticker-item {
+      margin: 0;
+      width: clamp(180px, 22vw, 280px);
+      height: clamp(220px, 28vw, 340px);
+      border-radius: 22px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .photo-ticker-item img {
+      width: 100%;
+      height: 120%;
+      object-fit: cover;
+      display: block;
+      will-change: transform;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+    }
+
+    .gallery-item .gallery-img {
+      will-change: transform;
+    }
+
+      @media (max-width: 900px) {
+      .hero-float-rail {
+        display: none;
+      }
+
+      .brand-megatype {
+        padding: 16px 8px 0;
+      }
+
+      .brand-megatype-word {
+        font-size: clamp(1.9rem, 13vw, 3.4rem);
+        background-size: 180% auto;
+      }
+
+      .video-stories-peek {
+        padding: 4px 16px 8px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+      }
+
+      .video-stories-peek::-webkit-scrollbar {
+        display: none;
+      }
+
+      .video-stories-peek .video-stories-grid {
+        display: flex !important;
+        grid-template-columns: none !important;
+        width: max-content;
+        gap: 14px;
+      }
+
+      .video-stories-peek .video-story-card {
+        flex: 0 0 min(82vw, 300px);
+        max-width: min(82vw, 300px);
+        scroll-snap-align: start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-float-card {
+        transition: none;
+      }
+      .photo-ticker-row {
+        transform: none !important;
+      }
+    }
+
+    @media (max-width: 1100px) and (min-width: 901px) {
+      .video-stories-peek .video-stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Travelo Images Trigger — stacked card scrub + How We Work */
+    .promise-stack-section {
+      position: relative;
+      background: var(--bg-dark);
+      padding: 40px 0 20px;
+    }
+
+    .promise-stack-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: clamp(28px, 4vw, 64px);
+      align-items: start;
+    }
+
+    .promise-stack-copy {
+      position: sticky;
+      top: 120px;
+      padding-bottom: 0;
+    }
+
+    .promise-stack-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 14px;
+    }
+
+    .promise-stack-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 500;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .promise-stack-desc {
+      font-size: 0.98rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      max-width: 36ch;
+      margin-bottom: 28px;
+    }
+
+    .promise-pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .promise-pillar h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 550;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+    }
+
+    .promise-pillar p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    .promise-stack-stage {
+      position: relative;
+      height: min(58vh, 440px);
+      min-height: 340px;
+    }
+
+    .promise-stack-sticky {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .promise-card-stack {
+      position: relative;
+      width: min(100%, 400px);
+      height: min(58vh, 440px);
+    }
+
+    .promise-stack-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 28px 60px -28px rgba(14, 23, 20, 0.45);
+      will-change: transform, opacity;
+    }
+
+    .promise-stack-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .promise-stack-card .stack-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 550;
+      text-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    }
+
+    .promise-flank {
+      position: absolute;
+      width: 42%;
+      height: 58%;
+      border-radius: 22px;
+      overflow: hidden;
+      opacity: 1;
+      will-change: transform;
+      z-index: 0;
+      box-shadow: 0 18px 40px -24px rgba(14, 23, 20, 0.4);
+    }
+
+    .promise-flank img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .promise-flank.is-left {
+      left: -18%;
+      top: 18%;
+    }
+
+    .promise-flank.is-right {
+      right: -18%;
+      bottom: 12%;
+    }
+
+    .promise-card-stack .promise-stack-card {
+      z-index: 2;
+    }
+
+    .how-work-section {
+      padding: 48px 0 40px;
+      background: var(--bg-dark);
+    }
+
+    .how-work-inner {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .how-work-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    .how-work-pills {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .how-work-pill {
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .how-work-pill.is-active {
+      background: var(--text-primary);
+      color: var(--bg-dark);
+      border-color: transparent;
+    }
+
+    .how-work-panels {
+      position: relative;
+      min-height: 180px;
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .how-work-panel {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s;
+      pointer-events: none;
+    }
+
+    .how-work-panel.is-active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+      position: relative;
+    }
+
+    .how-work-panel h3 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .how-work-panel p {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+
+      @media (max-width: 900px) {
+      .promise-stack-inner {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+
+      .promise-stack-copy {
+        position: relative;
+        top: auto;
+      }
+
+      .promise-stack-stage {
+        height: auto;
+        min-height: 0;
+      }
+
+      .promise-stack-sticky {
+        height: auto;
+        padding: 12px 0 32px;
+      }
+
+      .promise-card-stack {
+        width: 100%;
+        height: 360px;
+      }
+
+      .promise-flank {
+        display: none;
+      }
+
+      .how-work-inner {
+        padding: 0 20px;
+      }
+    }
+
+    /* ==========================================================================
        SECTION BRIDGE — PARALLAX TRANSITION INTO ABOUT
        ========================================================================== */
     .section-bridge {
       position: relative;
       width: 100%;
-      height: clamp(42vh, 52vw, 62vh);
-      min-height: 320px;
-      max-height: 640px;
+      min-height: clamp(520px, 78vh, 820px);
       overflow: hidden;
       background: #0c1210;
       isolation: isolate;
+      display: flex;
+      flex-direction: column;
     }
 
     .section-bridge-media {
       position: absolute;
-      inset: -22% 0;
+      inset: -18% 0;
       z-index: 0;
       will-change: transform;
     }
@@ -993,10 +1599,11 @@
       z-index: 1;
       background:
         linear-gradient(180deg,
-          rgba(12, 18, 16, 0.55) 0%,
-          rgba(12, 18, 16, 0.28) 42%,
-          rgba(12, 18, 16, 0.48) 78%,
-          var(--bg-dark) 100%),
+          rgba(12, 18, 16, 0.58) 0%,
+          rgba(12, 18, 16, 0.32) 34%,
+          rgba(12, 18, 16, 0.55) 68%,
+          rgba(12, 18, 16, 0.88) 92%,
+          #0c1210 100%),
         linear-gradient(90deg,
           rgba(12, 18, 16, 0.5) 0%,
           transparent 55%,
@@ -1008,25 +1615,37 @@
       background:
         linear-gradient(180deg,
           rgba(8, 12, 11, 0.62) 0%,
-          rgba(8, 12, 11, 0.32) 42%,
-          rgba(8, 12, 11, 0.55) 78%,
-          var(--bg-dark) 100%),
+          rgba(8, 12, 11, 0.36) 34%,
+          rgba(8, 12, 11, 0.58) 68%,
+          rgba(8, 12, 11, 0.9) 92%,
+          #080c0b 100%),
         linear-gradient(90deg,
-          rgba(8, 12, 11, 0.55) 0%,
+          rgba(8, 12, 11, 0.52) 0%,
           transparent 55%,
-          rgba(8, 12, 11, 0.32) 100%);
+          rgba(8, 12, 11, 0.3) 100%);
+    }
+
+    .section-bridge-inner {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: inherit;
+      padding: clamp(72px, 11vh, 120px) 0 clamp(20px, 3vh, 36px);
     }
 
     .section-bridge-content {
       position: relative;
-      z-index: 2;
-      height: 100%;
+      z-index: 3;
       max-width: var(--container-max);
+      width: 100%;
       margin: 0 auto;
-      padding: 0 40px 8vh;
+      padding: 0 40px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: flex-start;
       will-change: transform, opacity;
     }
@@ -1054,8 +1673,13 @@
 
     .section-bridge-title em {
       font-style: italic;
-      font-weight: 450;
-      color: var(--accent-cyan);
+      font-weight: 500;
+      color: #E8C9A0;
+      text-shadow: 0 0 40px rgba(232, 201, 160, 0.35);
+      background: linear-gradient(120deg, #F3E2C8 0%, #C4A06A 45%, #E8C9A0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .section-bridge-line {
@@ -1505,20 +2129,24 @@
       width: 100%;
       height: 100%;
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
       overflow: hidden;
+      padding: 100px 0 36px;
+      box-sizing: border-box;
     }
 
     .horizontal-hud {
-      position: absolute;
-      top: 60px;
-      left: 60px;
-      right: 60px;
+      position: relative;
+      flex: 0 0 auto;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: space-between;
+      gap: 24px;
       z-index: 50;
       pointer-events: none;
+      padding: 0 60px 28px;
     }
 
     .hud-title-wrap {
@@ -1591,8 +2219,10 @@
 
     .horizontal-track {
       display: flex;
-      height: 100%;
-      align-items: center;
+      flex: 1 1 auto;
+      min-height: 0;
+      height: auto;
+      align-items: stretch;
       padding-left: 60px;
       padding-right: 140px;
       gap: 40px;
@@ -1601,7 +2231,9 @@
 
     .expedition-card {
       flex: 0 0 clamp(420px, 48vw, 720px);
-      height: clamp(520px, 68vh, 670px);
+      height: 100%;
+      max-height: min(62vh, 620px);
+      min-height: 460px;
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
@@ -1998,9 +2630,17 @@
     }
 
     .video-stories-inner {
-      max-width: var(--container-max);
+      width: 100%;
       margin: 0 auto;
+      padding: 0;
+    }
+
+    .video-stories-inner > .section-header-center {
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
       padding: 0 40px;
+      margin-bottom: 50px;
     }
 
     .section-header-center {
@@ -2189,6 +2829,8 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
+      overflow: visible;
+      position: relative;
     }
 
     .gallery-item {
@@ -2199,7 +2841,9 @@
       box-shadow: var(--card-shadow);
       border: 1px solid var(--border-subtle);
       cursor: pointer;
-      transition: transform 0.4s var(--ease-elastic), box-shadow 0.35s ease;
+      transition: box-shadow 0.35s ease;
+      will-change: transform, opacity;
+      transform-origin: center center;
     }
 
     .gallery-item.span-2 {
@@ -2217,6 +2861,7 @@
     .gallery-item:hover {
       transform: translateY(-4px);
       box-shadow: var(--card-shadow-hover);
+      transition: transform 0.4s var(--ease-elastic), box-shadow 0.35s ease;
     }
 
     .gallery-item:hover .gallery-img {
@@ -2921,7 +3566,7 @@
       .hero-content-layer {
         max-width: 100%;
         padding: 0 20px;
-        margin-top: 8vh;
+        margin-top: 0;
       }
 
       .hero-brand-mark {
@@ -3032,13 +3677,15 @@
       }
 
       .section-bridge {
-        height: 48vh;
-        min-height: 280px;
-        max-height: 480px;
+        min-height: 520px;
+      }
+
+      .section-bridge-inner {
+        padding: 88px 0 24px;
       }
 
       .section-bridge-content {
-        padding: 0 20px 6vh;
+        padding: 0 20px;
       }
 
       .section-bridge-title {
@@ -3272,9 +3919,13 @@
         padding: 64px 0;
       }
 
-      .video-stories-inner,
       .gallery-inner,
       .footer-inner {
+        padding: 0 16px;
+      }
+
+      .video-stories-inner > .section-header-center {
+        margin-bottom: 28px;
         padding: 0 16px;
       }
 
@@ -3285,11 +3936,6 @@
 
       .section-title {
         font-size: clamp(1.6rem, 7vw, 2.1rem);
-      }
-
-      .video-stories-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
       }
 
       .video-story-card {
@@ -3514,6 +4160,34 @@
             </div>
           </div>
 
+          <!-- Travelo-style floating destination carousel -->
+          <div class="hero-float-rail" id="hero-float-rail" aria-label="Featured destinations">
+            <article class="hero-float-card is-active" data-float-card>
+              <img src="https://www.mytourguru.com/images/customer/img1.webp" alt="" loading="lazy">
+              <div class="hero-float-meta">
+                <strong>Andaman Escape</strong>
+                <span>Havelock &amp; Neil · from ₹9,000</span>
+              </div>
+              <span class="hero-float-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </article>
+            <article class="hero-float-card" data-float-card>
+              <img src="https://www.mytourguru.com/images/customer/img3.webp" alt="" loading="lazy">
+              <div class="hero-float-meta">
+                <strong>Ladakh High</strong>
+                <span>Nubra &amp; Pangong · Group Tour</span>
+              </div>
+              <span class="hero-float-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+            </article>
+            <article class="hero-float-card" data-float-card>
+              <img src="https://www.mytourguru.com/images/customer/img5.webp" alt="" loading="lazy">
+              <div class="hero-float-meta">
+                <strong>Kashmir Valley</strong>
+                <span>Dal Lake &amp; Gulmarg · Houseboat</span>
+              </div>
+              <span class="hero-float-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+            </article>
+          </div>
+
           <div class="scroll-down-hud" id="scroll-hud">
             <div class="scroll-down-mouse">
               <div class="scroll-down-wheel"></div>
@@ -3635,10 +4309,18 @@
           >
         </div>
         <div class="section-bridge-scrim" aria-hidden="true"></div>
-        <div class="section-bridge-content" data-parallax-fg>
-          <p class="section-bridge-eyebrow">Beyond the itinerary</p>
-          <h2 class="section-bridge-title">The ground team behind <em>every mile</em></h2>
-          <div class="section-bridge-line" aria-hidden="true"></div>
+        <div class="section-bridge-inner">
+          <div class="section-bridge-content" data-parallax-fg>
+            <p class="section-bridge-eyebrow">Beyond the itinerary</p>
+            <h2 class="section-bridge-title">The ground team behind <em>every mile</em></h2>
+            <div class="section-bridge-line" aria-hidden="true"></div>
+          </div>
+          <div class="brand-megatype" id="brand-megatype" aria-hidden="true">
+            <div class="brand-megatype-track">
+              <span class="brand-megatype-word" data-mega>MY&nbsp;TOUR&nbsp;GURU</span>
+              <span class="brand-megatype-mark">®</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -3657,7 +4339,7 @@
                 On-ground experts across Andaman, Ladakh &amp; Kashmir
               </h2>
 
-              <p class="manifesto-core-statement">
+              <p class="manifesto-core-statement" id="about-scrub-text" data-scrub-text>
                 <span class="highlight-cyan">Mytourguru.com</span> is a part of <strong>My Tour Guru Holiday Pvt. Ltd.</strong> A complete Destination Management Company (DMC) teamed by hardcore professionals with average experience of 10 years in Domestic travel, approved by the Government of India.
               </p>
 
@@ -3765,6 +4447,87 @@
             </div>
           </div>
 
+        </div>
+      </section>
+
+      <!-- Travelo Images Trigger — stacked destination scrub -->
+      <section class="promise-stack-section" id="promise-stack" aria-label="Our promise">
+        <div class="promise-stack-inner">
+          <div class="promise-stack-copy">
+            <div class="promise-stack-eyebrow">Our Promise</div>
+            <h2 class="promise-stack-title">Designed around every traveler</h2>
+            <p class="promise-stack-desc">
+              From first enquiry to safe return — direct DMC logistics, on-ground managers, and itineraries shaped to your pace.
+            </p>
+            <div class="promise-pillars">
+              <div class="promise-pillar">
+                <h4>Personalized Planning</h4>
+                <p>Andaman beaches, Ladakh altitudes, or Kashmir valleys — built around your dates, style, and budget.</p>
+              </div>
+              <div class="promise-pillar">
+                <h4>Local Experiences</h4>
+                <p>Private ferries, oxygen-backed mountain runs, houseboats, and guides who live the destinations.</p>
+              </div>
+              <div class="promise-pillar">
+                <h4>Dedicated Support</h4>
+                <p>Port Blair HQ with Delhi &amp; Leh branches — reachable before, during, and after your trip.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="promise-stack-stage" id="images-trigger">
+            <div class="promise-stack-sticky">
+              <div class="promise-flank is-left" data-flank="left">
+                <img src="https://www.mytourguru.com/images/customer/img4.webp" alt="" loading="lazy">
+              </div>
+              <div class="promise-flank is-right" data-flank="right">
+                <img src="https://www.mytourguru.com/images/customer/img6.webp" alt="" loading="lazy">
+              </div>
+              <div class="promise-card-stack">
+                <article class="promise-stack-card" data-stack-card>
+                  <img src="https://www.mytourguru.com/images/customer/img1.webp" alt="Andaman travelers" loading="lazy">
+                  <span class="stack-caption">Andaman</span>
+                </article>
+                <article class="promise-stack-card" data-stack-card>
+                  <img src="https://www.mytourguru.com/images/customer/img3.webp" alt="Ladakh travelers" loading="lazy">
+                  <span class="stack-caption">Ladakh</span>
+                </article>
+                <article class="promise-stack-card" data-stack-card>
+                  <img src="https://www.mytourguru.com/images/customer/img5.webp" alt="Kashmir travelers" loading="lazy">
+                  <span class="stack-caption">Kashmir</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Travelo How We Work — step pills carousel -->
+      <section class="how-work-section" id="how-we-work" aria-label="How we work">
+        <div class="how-work-inner">
+          <div class="how-work-header section-header-center">
+            <span class="section-eyebrow">How we work</span>
+            <h3 class="section-title">Plan, book &amp; explore with confidence</h3>
+          </div>
+          <div class="how-work-pills" role="tablist" aria-label="Planning steps">
+            <button type="button" class="how-work-pill is-active" data-how-pill="0" role="tab" aria-selected="true">Your Plan</button>
+            <button type="button" class="how-work-pill" data-how-pill="1" role="tab" aria-selected="false">Plan Together</button>
+            <button type="button" class="how-work-pill" data-how-pill="2" role="tab" aria-selected="false">Travel Happy</button>
+          </div>
+          <div class="how-work-panels">
+            <div class="how-work-panel is-active" data-how-panel="0" role="tabpanel">
+              <h3>Share your dream trip</h3>
+              <p>Tell us destinations, dates, group size, and budget — Andaman, Ladakh, Kashmir, or a multi-leg journey.</p>
+            </div>
+            <div class="how-work-panel" data-how-panel="1" role="tabpanel">
+              <h3>We craft the itinerary</h3>
+              <p>Our specialists lock ferries, stays, permits, and experiences — then refine until every day matches your vision.</p>
+            </div>
+            <div class="how-work-panel" data-how-panel="2" role="tabpanel">
+              <h3>Travel with ground support</h3>
+              <p>Confirm, fly out, and explore with on-ground managers, trusted partners, and direct DMC pricing.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -4135,8 +4898,10 @@
               Real stories and candid reviews from voyagers who explored Andaman, Ladakh, and Kashmir with My Tour Guru.
             </p>
           </div>
+        </div>
 
-          <div class="video-stories-grid">
+          <div class="video-stories-peek" id="video-stories-peek">
+          <div class="video-stories-grid" id="video-stories-track">
             <!-- Review 1: Andaman (yt4.webp) -->
             <div class="video-story-card">
               <div class="video-thumb-wrap">
@@ -4223,6 +4988,56 @@
                 </div>
               </div>
             </div>
+
+            <!-- Extra peek cards for Travelo-style carousel depth -->
+            <div class="video-story-card">
+              <div class="video-thumb-wrap">
+                <span class="video-badge-tag"><i class="fa-solid fa-water"></i> Neil Island</span>
+                <img src="https://www.mytourguru.com/images/customer/img2.webp" alt="Couple in Havelock" class="video-thumb-img" loading="lazy">
+                <a href="https://www.youtube.com/watch?v=mytourguru" target="_blank" rel="noopener noreferrer" class="video-play-btn" aria-label="Play video review">
+                  <i class="fa-solid fa-play"></i>
+                </a>
+              </div>
+              <div class="video-story-content">
+                <div>
+                  <h4 class="video-story-title">Honeymoon in Havelock</h4>
+                  <p class="video-story-desc">"Private ferry tickets, beachside stays, and scuba at Elephant Beach — every detail felt curated."</p>
+                </div>
+                <div class="video-story-author">
+                  <div class="video-author-avatar">NK</div>
+                  <div>
+                    <div class="video-author-name">Neha & Kunal</div>
+                    <div class="video-author-meta">Andaman Couple Package</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </section>
+
+      <!-- Travelo-style image ticker / photo strip -->
+      <section class="photo-ticker" id="photo-ticker" aria-hidden="true">
+        <div class="photo-ticker-row" id="photo-ticker-row">
+          <div class="photo-ticker-track">
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img1.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img2.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img3.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img4.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img5.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img6.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img7.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img8.webp" alt="" loading="lazy"></figure>
+          </div>
+          <div class="photo-ticker-track" aria-hidden="true">
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img1.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img2.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img3.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img4.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img5.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img6.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img7.webp" alt="" loading="lazy"></figure>
+            <figure class="photo-ticker-item"><img src="https://www.mytourguru.com/images/customer/img8.webp" alt="" loading="lazy"></figure>
           </div>
         </div>
       </section>
@@ -4281,7 +5096,7 @@
               </div>
             </div>
 
-            <div class="gallery-item span-2">
+            <div class="gallery-item span-2" data-gallery-center>
               <img src="https://www.mytourguru.com/images/customer/img5.webp" alt="Dal Lake Shikara Ride" class="gallery-img" loading="lazy">
               <div class="gallery-overlay">
                 <div>
@@ -4715,6 +5530,9 @@
     let horizontalScrollTriggerInstance = null;
 
     const ctx = gsap.context(() => {
+      /* Kill any leftover GSAP transforms that broke video centering */
+      gsap.set('#hero-bg-video', { clearProps: 'transform,x,y,xPercent,yPercent,scale,rotation' });
+      gsap.set('#hero-video-container', { clearProps: 'transform,x,y,xPercent,yPercent,scale' });
       
       // Cinematic entrance — brand first, then line, CTA
       gsap.from('.hero-brand-mark', {
@@ -4756,6 +5574,35 @@
         delay: 1
       });
 
+      /* Travelo-style hero floating card carousel */
+      const floatCards = gsap.utils.toArray('[data-float-card]');
+      const floatRail = document.getElementById('hero-float-rail');
+      if (floatRail && floatCards.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        /* Keep opacity at 1 so pin scrub timeline doesn't bake in a 0 start */
+        gsap.set(floatRail, { opacity: 1, x: 0 });
+        gsap.from(floatRail, {
+          x: 48,
+          opacity: 0,
+          duration: 1,
+          ease: 'power3.out',
+          delay: 0.95,
+          immediateRender: false
+        });
+
+        let floatIndex = 0;
+        const cycleFloat = () => {
+          const prev = floatCards[floatIndex];
+          floatIndex = (floatIndex + 1) % floatCards.length;
+          const next = floatCards[floatIndex];
+          prev.classList.remove('is-active');
+          prev.classList.add('is-exit');
+          next.classList.remove('is-exit');
+          next.classList.add('is-active');
+          setTimeout(() => prev.classList.remove('is-exit'), 550);
+        };
+        setInterval(cycleFloat, 3200);
+      }
+
       gsap.from('.concierge-inner > *', {
         y: 36,
         opacity: 0,
@@ -4769,7 +5616,7 @@
         }
       });
 
-      /* Section bridge parallax + scroll-in reveals (skipped when reduced motion) */
+      /* Section bridge + Travelo scrub systems + reveals */
       const mmReveal = gsap.matchMedia();
       mmReveal.add('(prefers-reduced-motion: no-preference)', () => {
         const bridge = document.querySelector('#section-bridge');
@@ -4825,14 +5672,335 @@
           }
         }
 
+        /* Giant brand megatype scrub — image fill inside letters */
+        const mega = document.querySelector('#brand-megatype');
+        const megaWord = document.querySelector('[data-mega]');
+        if (mega) {
+          gsap.fromTo('.brand-megatype-track',
+            { scale: 0.88, yPercent: 12, opacity: 0.55, transformOrigin: '50% 50%' },
+            {
+              scale: 1,
+              yPercent: 0,
+              opacity: 1,
+              transformOrigin: '50% 50%',
+              ease: 'none',
+              scrollTrigger: {
+                trigger: bridge || mega,
+                start: 'top 75%',
+                end: 'bottom 55%',
+                scrub: 0.6
+              }
+            }
+          );
+
+          if (megaWord) {
+            gsap.fromTo(megaWord,
+              { backgroundPosition: '50% 20%' },
+              {
+                backgroundPosition: '50% 70%',
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: bridge || mega,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: true
+                }
+              }
+            );
+          }
+        }
+
+        /* About paragraph word-by-word color scrub */
+        const scrubEl = document.querySelector('#about-scrub-text');
+        if (scrubEl && !scrubEl.dataset.scrubReady) {
+          scrubEl.dataset.scrubReady = '1';
+          const walk = (node) => {
+            [...node.childNodes].forEach((child) => {
+              if (child.nodeType === 3) {
+                const parts = child.textContent.split(/(\s+)/);
+                const frag = document.createDocumentFragment();
+                parts.forEach((part) => {
+                  if (!part) return;
+                  if (/^\s+$/.test(part)) {
+                    frag.appendChild(document.createTextNode(part));
+                  } else {
+                    const span = document.createElement('span');
+                    span.className = 'scrub-word';
+                    if (child.parentElement?.classList.contains('highlight-cyan')) {
+                      span.classList.add('highlight-cyan');
+                    }
+                    span.textContent = part;
+                    frag.appendChild(span);
+                  }
+                });
+                child.replaceWith(frag);
+              } else if (child.nodeType === 1) {
+                walk(child);
+              }
+            });
+          };
+          walk(scrubEl);
+
+          const words = scrubEl.querySelectorAll('.scrub-word');
+          ScrollTrigger.create({
+            trigger: scrubEl,
+            start: 'top 75%',
+            end: 'bottom 40%',
+            scrub: true,
+            onUpdate: (self) => {
+              const lit = Math.floor(self.progress * words.length);
+              words.forEach((w, i) => w.classList.toggle('is-lit', i <= lit));
+            }
+          });
+        }
+
+        /* Video stories — static grid on desktop; native snap scroll on mobile (no GSAP x scrub) */
+        const peekTrack = document.getElementById('video-stories-track');
+        if (peekTrack) gsap.set(peekTrack, { clearProps: 'transform,x' });
+
+        /* Photo ticker — infinite + scroll velocity boost */
+        const photoRow = document.getElementById('photo-ticker-row');
+        if (photoRow) {
+          let px = 0;
+          let pVel = 0;
+          let pLoop = photoRow.scrollWidth / 2;
+          const measurePhoto = () => { pLoop = photoRow.scrollWidth / 2 || 1; };
+          measurePhoto();
+          window.addEventListener('resize', measurePhoto, { passive: true });
+          lenis.on('scroll', ({ velocity }) => { pVel += (velocity - pVel) * 0.12; });
+          gsap.ticker.add(() => {
+            if (!pLoop) return;
+            pVel *= 0.9;
+            px -= 0.4 + Math.min(1.4, Math.abs(pVel) * 0.3);
+            if (px <= -pLoop) px += pLoop;
+            photoRow.style.transform = `translate3d(${px}px, 0, 0)`;
+          });
+
+          gsap.utils.toArray('.photo-ticker-item img').forEach((img) => {
+            gsap.fromTo(img,
+              { yPercent: -8 },
+              {
+                yPercent: 8,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: '#photo-ticker',
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: true
+                }
+              }
+            );
+          });
+        }
+
+        /* Gallery mosaic — burst outward from center image on scroll-in */
+        const galleryGrid = document.querySelector('.gallery-mosaic-grid');
+        const galleryItems = gsap.utils.toArray('.gallery-mosaic-grid .gallery-item');
+        if (galleryGrid && galleryItems.length) {
+          const centerItem = galleryGrid.querySelector('[data-gallery-center]') || galleryItems[Math.floor(galleryItems.length / 2)];
+
+          const setGalleryBurstFrom = () => {
+            gsap.set(galleryItems, { clearProps: 'transform,x,y,scale,opacity' });
+            void galleryGrid.offsetWidth;
+            const cRect = centerItem.getBoundingClientRect();
+            const cX = cRect.left + cRect.width / 2;
+            const cY = cRect.top + cRect.height / 2;
+            galleryItems.forEach((item) => {
+              const r = item.getBoundingClientRect();
+              const ix = r.left + r.width / 2;
+              const iy = r.top + r.height / 2;
+              const isCenter = item === centerItem;
+              gsap.set(item, {
+                x: isCenter ? 0 : cX - ix,
+                y: isCenter ? 0 : cY - iy,
+                scale: isCenter ? 1.05 : 0.55,
+                opacity: isCenter ? 1 : 0,
+                zIndex: isCenter ? 5 : 1
+              });
+            });
+          };
+
+          setGalleryBurstFrom();
+
+          const galleryBurst = gsap.to(galleryItems, {
+            x: 0,
+            y: 0,
+            scale: 1,
+            opacity: 1,
+            zIndex: 1,
+            duration: 1.05,
+            ease: 'power3.out',
+            stagger: {
+              each: 0.06,
+              from: 'center',
+              grid: 'auto'
+            },
+            paused: true,
+            onComplete: () => {
+              galleryItems.forEach((item) => gsap.set(item, { clearProps: 'transform,x,y,scale,opacity,zIndex' }));
+            }
+          });
+
+          ScrollTrigger.create({
+            trigger: galleryGrid,
+            start: 'top 78%',
+            once: true,
+            onEnter: () => {
+              setGalleryBurstFrom();
+              galleryBurst.restart();
+            },
+            onRefresh: () => {
+              if (galleryBurst.progress() === 0) setGalleryBurstFrom();
+            }
+          });
+
+          gsap.utils.toArray('.gallery-item .gallery-img').forEach((img) => {
+            gsap.fromTo(img,
+              { yPercent: -8, scale: 1.08 },
+              {
+                yPercent: 8,
+                scale: 1.08,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: img.closest('.gallery-item') || img,
+                  start: 'top bottom',
+                  end: 'bottom top',
+                  scrub: true
+                }
+              }
+            );
+          });
+        }
+
+        /* Promise stack — autoplay carousel (Andaman → Ladakh → Kashmir) */
+        const stackCards = gsap.utils.toArray('[data-stack-card]');
+        const imagesTrigger = document.getElementById('images-trigger');
+        const promiseSection = document.getElementById('promise-stack');
+        if (stackCards.length && imagesTrigger) {
+          let stackIndex = 0;
+          let stackTimer = null;
+          let stackBusy = false;
+          const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          const flankL = document.querySelector('[data-flank="left"]');
+          const flankR = document.querySelector('[data-flank="right"]');
+
+          stackCards.forEach((card, i) => {
+            gsap.set(card, {
+              opacity: i === 0 ? 1 : 0,
+              y: i === 0 ? 0 : 36,
+              scale: i === 0 ? 1 : 0.92,
+              rotate: i === 0 ? 0 : -2,
+              zIndex: stackCards.length - i
+            });
+          });
+
+          const goToStack = (next) => {
+            if (stackBusy || next === stackIndex) return;
+            stackBusy = true;
+            const prev = stackCards[stackIndex];
+            const card = stackCards[next];
+            const dir = next > stackIndex || (stackIndex === stackCards.length - 1 && next === 0) ? 1 : -1;
+
+            gsap.set(card, { zIndex: stackCards.length + 1 });
+            const tl = gsap.timeline({
+              onComplete: () => {
+                stackCards.forEach((c, i) => gsap.set(c, { zIndex: i === next ? stackCards.length : stackCards.length - i }));
+                stackIndex = next;
+                stackBusy = false;
+              }
+            });
+
+            tl.to(prev, {
+              opacity: 0,
+              y: dir > 0 ? -28 : 28,
+              scale: 0.94,
+              rotate: dir > 0 ? 2 : -2,
+              duration: 0.7,
+              ease: 'power2.inOut'
+            }, 0).fromTo(card,
+              { opacity: 0, y: dir > 0 ? 40 : -40, scale: 0.92, rotate: dir > 0 ? -3 : 3 },
+              { opacity: 1, y: 0, scale: 1, rotate: 0, duration: 0.7, ease: 'power2.out' },
+              0.08
+            );
+
+            if (flankL) {
+              tl.to(flankL, { yPercent: dir > 0 ? -8 : 8, xPercent: dir > 0 ? 2 : -2, duration: 0.7, ease: 'power1.out' }, 0);
+            }
+            if (flankR) {
+              tl.to(flankR, { yPercent: dir > 0 ? 8 : -8, xPercent: dir > 0 ? -2 : 2, duration: 0.7, ease: 'power1.out' }, 0);
+            }
+          };
+
+          const armStackTimer = () => {
+            clearInterval(stackTimer);
+            if (reducedMotion) return;
+            stackTimer = setInterval(() => {
+              goToStack((stackIndex + 1) % stackCards.length);
+            }, 3200);
+          };
+
+          const stopStackTimer = () => clearInterval(stackTimer);
+
+          if (promiseSection) {
+            ScrollTrigger.create({
+              trigger: promiseSection,
+              start: 'top 85%',
+              end: 'bottom 15%',
+              onEnter: armStackTimer,
+              onEnterBack: armStackTimer,
+              onLeave: stopStackTimer,
+              onLeaveBack: stopStackTimer
+            });
+          } else {
+            armStackTimer();
+          }
+
+          imagesTrigger.addEventListener('mouseenter', stopStackTimer);
+          imagesTrigger.addEventListener('mouseleave', armStackTimer);
+          imagesTrigger.addEventListener('focusin', stopStackTimer);
+          imagesTrigger.addEventListener('focusout', armStackTimer);
+        }
+
+        /* How We Work — pill carousel (autoplay + click) */
+        const howPills = gsap.utils.toArray('[data-how-pill]');
+        const howPanels = gsap.utils.toArray('[data-how-panel]');
+        if (howPills.length && howPanels.length) {
+          let howIndex = 0;
+          let howTimer;
+
+          const setHowStep = (idx) => {
+            howIndex = idx;
+            howPills.forEach((p, i) => {
+              p.classList.toggle('is-active', i === idx);
+              p.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+            });
+            howPanels.forEach((panel, i) => panel.classList.toggle('is-active', i === idx));
+          };
+
+          const armHowTimer = () => {
+            clearInterval(howTimer);
+            howTimer = setInterval(() => setHowStep((howIndex + 1) % howPills.length), 4200);
+          };
+
+          howPills.forEach((pill) => {
+            pill.addEventListener('click', () => {
+              setHowStep(Number(pill.getAttribute('data-how-pill')) || 0);
+              armHowTimer();
+            });
+          });
+
+          armHowTimer();
+        }
+
         const reveal = (targets, opts = {}) => {
           const els = gsap.utils.toArray(targets);
           if (!els.length) return;
-          const { trigger, y = 48, stagger = 0.1, duration = 0.85, scale } = opts;
+          const { trigger, y = 56, stagger = 0.1, duration = 0.95, scale, filter } = opts;
           gsap.from(els, {
             y,
             opacity: 0,
             ...(scale != null ? { scale } : {}),
+            ...(filter ? { filter: 'blur(8px)' } : {}),
             duration,
             ease: 'power3.out',
             stagger,
@@ -4844,17 +6012,17 @@
           });
         };
 
-        reveal('.about-text-col > *', { trigger: '#about-us', y: 36, stagger: 0.08 });
-        reveal('.about-media-col', { trigger: '#about-us', y: 56, duration: 1 });
-        reveal('.territory-card', { trigger: '.manifesto-territories-grid', y: 56, stagger: 0.14 });
-        reveal('.manifesto-credo-bar', { trigger: '.manifesto-credo-bar', y: 28 });
-        reveal('.horizontal-hud > *', { trigger: '#expeditions-track', y: 24, stagger: 0.1 });
-        reveal('.metric-card', { trigger: '.metrics-grid', y: 40, stagger: 0.1 });
-        reveal('#video-stories .section-header-center > *', { trigger: '#video-stories', y: 28, stagger: 0.08 });
-        reveal('.video-story-card', { trigger: '.video-stories-grid', y: 48, stagger: 0.12 });
-        reveal('#customer-gallery .section-header-center > *', { trigger: '#customer-gallery', y: 28, stagger: 0.08 });
-        reveal('.gallery-item', { trigger: '.gallery-mosaic-grid', y: 36, scale: 0.97, stagger: 0.06, duration: 0.75 });
-        reveal('.footer-cta-card > *', { trigger: '.footer-cta-card', y: 32, stagger: 0.1 });
+        reveal('.about-text-col > *:not(#about-scrub-text)', { trigger: '#about-us', y: 40, stagger: 0.09 });
+        reveal('.about-media-col', { trigger: '#about-us', y: 64, duration: 1.1 });
+        reveal('.territory-card', { trigger: '.manifesto-territories-grid', y: 64, stagger: 0.14 });
+        reveal('.manifesto-credo-bar', { trigger: '.manifesto-credo-bar', y: 32 });
+        reveal('.promise-stack-copy > *', { trigger: '#promise-stack', y: 36, stagger: 0.08 });
+        reveal('#how-we-work .how-work-header > *', { trigger: '#how-we-work', y: 28, stagger: 0.08 });
+        reveal('.horizontal-hud > *', { trigger: '#expeditions-track', y: 28, stagger: 0.1 });
+        reveal('.metric-card', { trigger: '.metrics-grid', y: 48, stagger: 0.1, filter: true });
+        reveal('#video-stories .section-header-center > *', { trigger: '#video-stories', y: 32, stagger: 0.08 });
+        reveal('#customer-gallery .section-header-center > *', { trigger: '#customer-gallery', y: 32, stagger: 0.08 });
+        reveal('.footer-cta-card > *', { trigger: '.footer-cta-card', y: 36, stagger: 0.1 });
         reveal('.footer-grid-4col > *', { trigger: '.footer-grid-4col', y: 28, stagger: 0.08 });
       });
 
@@ -4878,6 +6046,8 @@
       const mm = gsap.matchMedia();
 
       mm.add("(min-width: 769px)", () => {
+        if (floatRail) gsap.set(floatRail, { clearProps: 'opacity,x,y' });
+
         const heroTimeline = gsap.timeline({
           scrollTrigger: {
             trigger: '#hero-scrub-section',
@@ -4889,17 +6059,20 @@
           }
         });
 
+        /* Parallax the container — never overwrite video object-fit centering */
         heroTimeline
-          .to('#hero-content-layer', {
-            y: -100,
-            scale: 0.94,
-            opacity: 0,
-            ease: 'power2.inOut'
-          }, 0)
-          .to('#hero-bg-video', {
-            scale: 1.18,
-            ease: 'none'
-          }, 0)
+          .fromTo('#hero-content-layer',
+            { y: 0, scale: 1, opacity: 1 },
+            { y: -100, scale: 0.94, opacity: 0, ease: 'power2.inOut' },
+            0)
+          .fromTo('#hero-video-container',
+            { scale: 1, yPercent: 0 },
+            { scale: 1.12, yPercent: 6, ease: 'none' },
+            0)
+          .fromTo('#hero-float-rail',
+            { y: 0, x: 0, opacity: 1 },
+            { y: -80, x: 40, opacity: 0, ease: 'power2.in' },
+            0)
           .to('#scroll-hud', {
             opacity: 0,
             duration: 0.15
@@ -4984,9 +6157,25 @@
               if (hudCounter) hudCounter.textContent = `0${cardIndex + 1}`;
               if (hudBar) hudBar.style.transform = `scaleX(${progress})`;
 
+              /* Travelo center-focus: active card scales up */
+              const viewportCenter = window.innerWidth * 0.5;
+              let closestIdx = 0;
+              let closestDist = Infinity;
+              cards.forEach((card, i) => {
+                const rect = card.getBoundingClientRect();
+                const mid = rect.left + rect.width / 2;
+                const dist = Math.abs(mid - viewportCenter);
+                if (dist < closestDist) {
+                  closestDist = dist;
+                  closestIdx = i;
+                }
+                card.classList.toggle('is-center-focus', false);
+              });
+              if (cards[closestIdx]) cards[closestIdx].classList.add('is-center-focus');
+
               const navPills = document.querySelectorAll('.nav-destination-pills .nav-pill');
               navPills.forEach((p, idx) => {
-                if (idx === Math.min(navPills.length - 1, cardIndex)) p.classList.add('active');
+                if (idx === Math.min(navPills.length - 1, closestIdx)) p.classList.add('active');
                 else p.classList.remove('active');
               });
             }
@@ -4999,9 +6188,10 @@
           const innerImg = card.querySelector('.card-parallax-img');
           if (innerImg) {
             gsap.fromTo(innerImg, 
-              { xPercent: 12 },
+              { xPercent: 12, scale: 1.08 },
               {
                 xPercent: -12,
+                scale: 1.08,
                 ease: "none",
                 scrollTrigger: {
                   trigger: "#expeditions-track",

@@ -8,3 +8,6 @@ node_modules/
 Thumbs.db
 travel guru.zip
 *.zip
+
+.vercel
+.env*
